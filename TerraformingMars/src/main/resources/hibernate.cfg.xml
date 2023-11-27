@@ -23,5 +23,6 @@
 		<mapping class="Models.Corporations"/>
 		<mapping class="Models.Games"/>
 		<mapping class="Models.Players"/>	
+		<mapping class="Models.Makers"/>	
 	</session-factory>
 </hibernate-configuration>

@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 
@@ -44,6 +46,11 @@ public class Makers {
 			inverseJoinColumns = @JoinColumn(name="id_neightbour") //NOM DE LA CLAU QUE NO PORTA EL PES
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
+	
+	@ManyToOne
+	@JoinColumn(name="Corporation")
+	private Corporations Copr;
+	
 	
 	public int getIdmakers() {
 		return idmakers;

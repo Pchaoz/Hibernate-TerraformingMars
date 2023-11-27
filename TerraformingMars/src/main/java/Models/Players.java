@@ -18,6 +18,11 @@ import javax.persistence.Table;
 @Table(name="Player")
 public class Players {
 	
+	@Override
+	public String toString() {
+		return "Players [IdPlayer=" + IdPlayer + ", Name=" + Name + ", Wins=" + Wins + ", cor=" + cor + ", Partides="
+				+ Partides + ", Guanyades=" + Guanyades + "]";
+	}
 	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="idPlayer")
 	private int IdPlayer;
