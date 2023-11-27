@@ -3,7 +3,6 @@
 	<groupId>TerraformingMars</groupId>
 	<artifactId>TerraformingMars</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<build>
 		<!--    Aquest plugin fa que Java no es posi a treballar en versió Java 5 perquè Eclipse l'agafa per defecte    -->
 		<plugins>
