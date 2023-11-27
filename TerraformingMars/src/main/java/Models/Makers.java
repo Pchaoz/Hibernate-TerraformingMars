@@ -1,13 +1,20 @@
 package Models;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name = "Makers")
@@ -30,8 +37,13 @@ public class Makers {
 	@Column(name = "TypeMaker")
 	TypeMaker typeMaker;
 
-
-	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(
+			name="TamaAmics", //NOM COLUMNA 
+			joinColumns = @JoinColumn(name="id_maker"), //NOM CLAU QUE PORTA EL PES
+			inverseJoinColumns = @JoinColumn(name="id_neightbour") //NOM DE LA CLAU QUE NO PORTA EL PES
+	)
+	private Set<Makers> neightbours = new HashSet<Makers>();
 	
 	public int getIdmakers() {
 		return idmakers;
