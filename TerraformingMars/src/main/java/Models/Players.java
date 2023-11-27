@@ -1,10 +1,17 @@
 package Models;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +25,12 @@ public class Players {
 	private String Name;
 	@Column(name = "Wins")
 	private int Wins = 0;
-	
+	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+	private Corporations cor;
+	@ManyToMany(mappedBy = "Jugadors")
+	private Set<Games> Partides = new HashSet<Games>();
+	@OneToMany(mappedBy = "Guanyador")
+	private Set<Games> Guanyades = new HashSet<Games>();
 	
 	public Players(String name) {
 		super();
