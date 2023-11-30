@@ -56,6 +56,12 @@ public class Games {
 		Jugadors = jugadors;
 		Guanyador = guanyador;
 	}
+	public Games(int oxygen, int temperature, int oceans) {
+		super();
+		Oxygen = oxygen;
+		Temperature = temperature;
+		Oceans = oceans;
+	}
 	
 	
 }

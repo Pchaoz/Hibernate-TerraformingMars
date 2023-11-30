@@ -44,6 +44,12 @@ public class Corporations {
 		this.player = player;
 	}
 
+	public Corporations(String name2, String desc) {
+		super();
+		Name = name2;
+		Description = desc;
+	}
+
 	public int getIdCorporations() {
 		return idCorporations;
 	}
