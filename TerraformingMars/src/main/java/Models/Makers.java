@@ -51,6 +51,11 @@ public class Makers {
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
 	
+	@ManyToOne
+	@JoinColumn(name="Corporation")
+	private Corporations Copr;
+	
+	
 	public int getIdmakers() {
 		return idmakers;
 	}
