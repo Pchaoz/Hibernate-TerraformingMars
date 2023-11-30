@@ -12,5 +12,10 @@ public class DAOPlayer extends DAOGeneric<Players, Integer>{
 		Players p = new Players(name);
 		this.Persistir(p);
 	}
-
+	public void GeneratePlayers() {
+		for (int i = 0; i < 4; i++) {
+			String name ="Player"+(i+1);
+			GeneratePlayer(name);
+		}
+	}
 }
