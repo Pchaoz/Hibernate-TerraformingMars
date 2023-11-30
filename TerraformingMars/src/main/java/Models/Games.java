@@ -40,4 +40,22 @@ public class Games {
 	//@JoinColumn(name="idGuanyador")
 	@JoinTable(name ="GamesWins", joinColumns = @JoinColumn(name ="PartidaID"), inverseJoinColumns = @JoinColumn(name="GuanyadorID"))
 	private Players Guanyador;
+	
+	public Games() {
+		
+	}
+	
+	public Games ( int oxygen, int temperature, int oceans, LocalDateTime dateStart,
+			LocalDateTime endDateTime, Set<Players> jugadors, Players guanyador) {
+		super();
+		Oxygen = oxygen;
+		Temperature = temperature;
+		Oceans = oceans;
+		DateStart = dateStart;
+		EndDateTime = endDateTime;
+		Jugadors = jugadors;
+		Guanyador = guanyador;
+	}
+	
+	
 }
