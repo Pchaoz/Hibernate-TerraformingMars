@@ -32,12 +32,24 @@ public class Players {
 	@OneToMany(mappedBy = "Guanyador")
 	private Set<Games> Guanyades = new HashSet<Games>();
 	
+	public Players() {
+		
+	}
+	
 	public Players(String name) {
 		super();
 		Name = name;
 	}
 	
-	
+	public Players(String name, int wins, Corporations cor, Set<Games> partides, Set<Games> guanyades) {
+		super();
+		Name = name;
+		Wins = wins;
+		this.cor = cor;
+		Partides = partides;
+		Guanyades = guanyades;
+	}
+
 	public int getIdPlayer() {
 		return IdPlayer;
 	}
