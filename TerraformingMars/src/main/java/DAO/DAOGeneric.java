@@ -30,6 +30,7 @@ public class DAOGeneric<T, ID extends Serializable> implements IDAOGeneric<T, ID
 		return Entity;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> Llistar() {
 		// TODO Auto-generated method stub

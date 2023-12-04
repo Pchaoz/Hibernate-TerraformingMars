@@ -15,7 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 
@@ -27,11 +26,8 @@ public class Makers {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int idmakers;
 
-	@Column(name = "Name", nullable = false)
+	@Column(name = "Name")
 	String name;
-
-	@Column(name = "Description")
-	String description;
 
 	@Column(name = "MaxNeightbours", nullable = false)
 	int maxneightbours = 0;
@@ -74,17 +70,6 @@ public class Makers {
 		this.name = name;
 	}
 
-
-	public String getDescription() {
-		return description;
-	}
-
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-
 	public int getMaxneightbours() {
 		return maxneightbours;
 	}
@@ -105,12 +90,17 @@ public class Makers {
 	}
 
 	
-	public Makers(String name, String description, int maxneightbours, TypeMaker typeMaker) {
+	public Makers(String name, int maxneightbours, TypeMaker typeMaker) {
 		super();
 		this.name = name;
-		this.description = description;
 		this.maxneightbours = maxneightbours;
 		this.typeMaker = typeMaker;
+	}
+	
+	public Makers(String name, int maxneighbours) {
+		super();
+		this.maxneightbours = maxneighbours;
+		this.name = name;
 	}
 
 	public Makers() {
@@ -119,7 +109,7 @@ public class Makers {
 
 	@Override
 	public String toString() {
-		return "Makers [idmakers=" + idmakers + ", name=" + name + ", description=" + description + ", maxneightbours="
+		return "Makers [idmakers=" + idmakers + ", name=" + name + ", description=" + ", maxneightbours="
 				+ maxneightbours + ", typeMaker=" + typeMaker + "]";
 	}
 

@@ -1,6 +1,5 @@
 package main;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -54,7 +53,7 @@ public class Main {
 		Set<Players> pl = new HashSet<Players>();
 		pl.add(j1);
 		Games gm = new Games(1, 14, 54, LocalDateTime.now(), LocalDateTime.now(),pl, j1);
-		Makers mk = new Makers("Mk1", "No apto para todas las edades", 3, TypeMaker.Ciutat);
+		Makers mk = new Makers("Mk1",  3, TypeMaker.Ciutat);
 		
 		session.persist(coor1);
 		session.persist(j1);
