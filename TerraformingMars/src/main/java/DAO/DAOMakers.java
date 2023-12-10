@@ -1,5 +1,9 @@
 package DAO;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import Models.Makers;
 import Models.TypeMaker;
 
@@ -40,5 +44,52 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 				this.generateMaker("Maker "+(i+1),6);
 			}
 		}
+	}
+	public ArrayList<Makers> GetMakersByType(TypeMaker tm) {
+		ArrayList<Makers> llistaMateixtipus = new ArrayList<Makers>();
+		List<Makers> llista =  this.Llistar();
+		for (Makers makers : llista) {
+			if(makers.getTypeMaker() == tm) {
+				llistaMateixtipus.add(makers);
+			}
+		}
+		return llistaMateixtipus;
+	}
+	public void AddMakersPosibleNeightbour(Makers m1, Makers m2) {
+		m1.AddNeightbour(m2);
+		m2.AddNeightbour(m1);
+	}
+	public Makers GetRandomMakerNoNeightbour() {
+		Random r = new Random();
+		Makers MakerNoNeightbour = null;
+		List<Makers> llistaMakers = this.Llistar();
+		if(AllMakersNeightbours()) {
+			return null;
+		}
+		while(MakerNoNeightbour==null) {
+			int random = r.nextInt(llistaMakers.size()+1);
+			 MakerNoNeightbour = llistaMakers.get(random);
+			if(MakerNoNeightbour.getNeightbours().size()==MakerNoNeightbour.getMaxneightbours()) {
+				MakerNoNeightbour = null;
+			}
+		}
+		return MakerNoNeightbour;
+	}
+	public List<Makers> GetAllMakerPossibleNeightbour(){
+		List<Makers> LlistaTotsMakers = this.Llistar();
+		List<Makers> LlistaPossibleNeightbour = new ArrayList<Makers>();
+		for (Makers makers : LlistaTotsMakers) {
+			if(makers.getNeightbours().size()<makers.getMaxneightbours()) {
+				LlistaPossibleNeightbour.add(makers);
+			}
+		}
+		
+		return LlistaPossibleNeightbour;	
+	}
+	public boolean AllMakersNeightbours() {
+		if(GetAllMakerPossibleNeightbour().size() == 0) {
+			return true;
+		}
+		return false;
 	}
 }

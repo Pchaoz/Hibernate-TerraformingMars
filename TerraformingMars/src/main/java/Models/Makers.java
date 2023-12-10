@@ -106,6 +106,26 @@ public class Makers {
 	public Makers() {
 		super();
 	}
+	public void AddNeightbour(Makers m) {
+		if(this == m) {
+			return;
+		}
+		if(this.neightbours.contains(m)) {
+			return;
+		}
+		if(this.neightbours.size()== this.getMaxneightbours()) {
+			return;
+		}
+		this.neightbours.add(m);
+	}
+
+	public Set<Makers> getNeightbours() {
+		return neightbours;
+	}
+
+	public void setNeightbours(Set<Makers> neightbours) {
+		this.neightbours = neightbours;
+	}
 
 	@Override
 	public String toString() {
