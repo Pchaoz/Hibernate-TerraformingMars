@@ -63,6 +63,9 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		Random r = new Random();
 		Makers MakerNoNeightbour = null;
 		List<Makers> llistaMakers = this.Llistar();
+		if(AllMakersNeightbours()) {
+			return null;
+		}
 		while(MakerNoNeightbour==null) {
 			int random = r.nextInt(llistaMakers.size()+1);
 			 MakerNoNeightbour = llistaMakers.get(random);
@@ -82,5 +85,11 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		}
 		
 		return LlistaPossibleNeightbour;	
+	}
+	public boolean AllMakersNeightbours() {
+		if(GetAllMakerPossibleNeightbour().size() == 0) {
+			return true;
+		}
+		return false;
 	}
 }
