@@ -72,4 +72,15 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		}
 		return MakerNoNeightbour;
 	}
+	public List<Makers> GetAllMakerPossibleNeightbour(){
+		List<Makers> LlistaTotsMakers = this.Llistar();
+		List<Makers> LlistaPossibleNeightbour = new ArrayList<Makers>();
+		for (Makers makers : LlistaTotsMakers) {
+			if(makers.getNeightbours().size()<makers.getMaxneightbours()) {
+				LlistaPossibleNeightbour.add(makers);
+			}
+		}
+		
+		return LlistaPossibleNeightbour;	
+	}
 }
