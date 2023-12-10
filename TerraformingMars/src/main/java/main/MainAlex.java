@@ -27,8 +27,12 @@ public class MainAlex {
 			}
 		}
 		Players Winner = Guanyador.getPlayer();
-		Games g =DAOg.Search(1);
+		Games g = DAOg.Search(1);
 		g.setGuanyador(Winner);
+		Winner.setWins(Winner.getWins()+1);
+		Winner.getGuanyades().add(g);
+		DAOg.update(g);
+		DAOp.update(Winner);
 	
 	}
 
