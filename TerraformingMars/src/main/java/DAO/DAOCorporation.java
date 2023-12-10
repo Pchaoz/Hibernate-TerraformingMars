@@ -18,9 +18,9 @@ public class DAOCorporation extends DAOGeneric<Corporations, Integer>{
 		GenerateCorp("Helion","3");
 		GenerateCorp("Mining Guild","4");
 		GenerateCorp("Phoblog","5");
-		GenerateCorp("Tharsis Republic","1");
-		GenerateCorp("U.N Mars Initiative","1");
-		GenerateCorp("Thorgate","1");	
+		GenerateCorp("Tharsis Republic","6");
+		GenerateCorp("U.N Mars Initiative","7");
+		GenerateCorp("Thorgate","8");	
 	}
 
 }
