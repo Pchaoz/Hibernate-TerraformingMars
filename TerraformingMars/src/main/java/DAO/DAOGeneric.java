@@ -37,6 +37,7 @@ public class DAOGeneric<T, ID extends Serializable> implements IDAOGeneric<T, ID
 		Session session = Utils.getSessionFactory().getCurrentSession();
 		session.getTransaction().begin();
 		List<T> llistat = session.createQuery("from "+entityClass.getName()).getResultList();
+		session.getTransaction().commit();
 		return llistat;
 	}
 

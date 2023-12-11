@@ -1,5 +1,9 @@
 package DAO;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Models.Corporations;
 import Models.Makers;
 import Models.TypeMaker;
 
@@ -40,5 +44,36 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 				this.generateMaker("Maker "+(i+1),6);
 			}
 		}
+	}
+	/*
+	 * Recupera todas las casillas de la base de datos y con un FOREACH comprueba si pertenecen a la corporacion 
+	 * pasada, si son de ella las remueve de la lista. Despues envia la lista con solo casillas de esa misma corporacion
+	 */
+	public List<Makers> getMakersByCoorp(Corporations cor) {
+		List<Makers> mk = Llistar();
+		List<Makers> mkCoorp = new ArrayList<Makers>();
+		System.out.println("aqu estoy GGET BY COORP");
+		for (Makers makers : mk) {
+			if (makers.getMakerOwner() != null) {
+				System.out.println("TENGO COORPORACION " + makers.getName());
+				if (makers.getMakerOwner().getName().equals(cor.getName()))
+					mkCoorp.add(makers);
+			}
+		}
+		return mkCoorp;
+	}
+	/*
+	 * Recupera todas las casillas y comprueba cuales de ellas no tienen asignada una corporacion, devuelve una lista
+	 * con todas las casillas libres de corporaciones. Funciona igual que getMakersByCoorp()
+	 */
+	public List<Makers> getMarkersNoCoorp() {
+		List<Makers> mk = Llistar();
+		List<Makers> mkNoCoorp = new ArrayList<Makers>();
+		for (Makers makers : mk) {
+			if (makers.getMakerOwner() == null) {
+				mkNoCoorp.add(makers);
+			}
+		}
+		return mkNoCoorp;
 	}
 }
