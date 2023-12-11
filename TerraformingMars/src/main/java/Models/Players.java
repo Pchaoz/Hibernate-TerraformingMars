@@ -40,7 +40,7 @@ public class Players {
 	public Players() {
 		
 	}
-	
+
 	public Players(String name) {
 		super();
 		Name = name;
@@ -72,6 +72,29 @@ public class Players {
 	}
 	public void setWins(int wins) {
 		Wins = wins;
+	}
+	public Corporations getCor() {
+		return cor;
+	}
+
+	public void setCor(Corporations cor) {
+		this.cor = cor;
+	}
+
+	public Set<Games> getPartides() {
+		return Partides;
+	}
+
+	public void setPartides(Set<Games> partides) {
+		Partides = partides;
+	}
+
+	public Set<Games> getGuanyades() {
+		return Guanyades;
+	}
+
+	public void setGuanyades(Set<Games> guanyades) {
+		Guanyades = guanyades;
 	}
 	
 }
