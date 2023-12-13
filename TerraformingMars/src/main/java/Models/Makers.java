@@ -49,7 +49,7 @@ public class Makers {
 	
 	@ManyToOne
 	@JoinColumn(name="Corporation")
-	private Corporations Copr;
+	private Corporations corp;
 	
 	
 	public int getIdmakers() {
