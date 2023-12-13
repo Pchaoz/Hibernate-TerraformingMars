@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import DAO.DAOCorporation;
 import DAO.DAOMakers;
 import DAO.DAOPlayer;
 import Models.Corporations;
@@ -20,10 +21,13 @@ public class MainJose {
 
 		DAOMakers daoMakers = new DAOMakers();
 		DAOPlayer daoPlayers = new DAOPlayer();
-		//daoPlayers.GeneratePlayer("Jose");
-		//Players player = daoPlayers.Search(1);
+		DAOCorporation daoCorporation = new DAOCorporation();
+
 		daoMakers.generarTablero();
+		daoCorporation.StartCorporations();
+		List<Corporations> corporations = daoCorporation.Llistar();
 		daoPlayers.GeneratePlayers();
+		daoPlayers.AssignCorporationToPlayers(corporations);
 		List<Players> players = daoPlayers.Llistar();
 		Players playerActual = players.get(0);
 		
@@ -142,5 +146,4 @@ public class MainJose {
 		}
 		System.out.println();
 	}
-
 }
