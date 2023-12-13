@@ -125,3 +125,4 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		}
 		return mkNoCoorp;
 }
+}
