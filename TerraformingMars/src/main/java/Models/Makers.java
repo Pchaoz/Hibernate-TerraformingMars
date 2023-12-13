@@ -37,6 +37,7 @@ public class Makers {
 	TypeMaker typeMaker;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="Corporation")
 	Corporations MakerOwner;
 
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -46,11 +47,6 @@ public class Makers {
 			inverseJoinColumns = @JoinColumn(name="id_neightbour") //NOM DE LA CLAU QUE NO PORTA EL PES
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
-	
-	@ManyToOne
-	@JoinColumn(name="Corporation")
-	private Corporations corp;
-	
 	
 	public int getIdmakers() {
 		return idmakers;
