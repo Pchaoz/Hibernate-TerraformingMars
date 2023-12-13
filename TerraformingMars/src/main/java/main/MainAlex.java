@@ -9,30 +9,34 @@ import Models.Games;
 import Models.Players;
 
 public class MainAlex {
-
+	static DAOPlayer daop = new DAOPlayer();
+	static DAOCorporation daoC = new DAOCorporation();
+	static DAOGames daoG = new DAOGames();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		DAOPlayer daop = new DAOPlayer();
-		DAOCorporation daoC = new DAOCorporation();
-		DAOGames daoG = new DAOGames();
+		
+		int numpartida = 1;
+		daoG.GenerateGames();
 		daoC.StartCorporations();
 		daop.GeneratePlayers();
-		SetWinner(daop, daoC, daoG);
+		SetWinner(numpartida);
 	}
-	private static void SetWinner(DAOPlayer DAOp, DAOCorporation DAOc, DAOGames DAOg) {
+	private static void SetWinner(int NumPartida) {
 		Corporations Guanyador = new Corporations();
-		for (Corporations c : DAOc.Llistar()) {
+		for (Corporations c : daoC.Llistar()) {
 			if(c.getVictorypoints()>Guanyador.getVictorypoints()) {
 				Guanyador=c;
 			}
 		}
+		//Conseguimos el winner mediante la corporation
 		Players Winner = Guanyador.getPlayer();
-		Games g = DAOg.Search(1);
+		
+		Games g = daoG.Search(NumPartida);
 		g.setGuanyador(Winner);
 		Winner.setWins(Winner.getWins()+1);
 		Winner.getGuanyades().add(g);
-		DAOg.update(g);
-		DAOp.update(Winner);
+		daoG.update(g);
+		daop.update(Winner);
 	
 	}
 
