@@ -28,7 +28,7 @@ public class DAOPlayer extends DAOGeneric<Players, Integer>{
 		}
 	}
 	
-	public void AssignCorporationToPlayers() 
+	public void AssignCorporationToPlayers(List<Corporations> corporations) 
 	{
 		List<Players> players = this.Llistar();
 		for (Players player : players) {
@@ -39,6 +39,7 @@ public class DAOPlayer extends DAOGeneric<Players, Integer>{
 				if(randomCorp.getPlayer() == null)
 				{
 					player.setCor(randomCorp);
+					randomCorp.setPlayer(player);
 					System.out.println("Asignando corporación " + randomCorp.getName() + " al jugador " + player.getName());
 				}
 			}
