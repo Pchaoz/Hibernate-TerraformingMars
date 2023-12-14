@@ -28,6 +28,8 @@ public class DAOPlayer extends DAOGeneric<Players, Integer>{
 		}
 	}
 	
+	/*Método que asigna una corporación aleatoria a cada jugador.
+	Comprueba si la corporación ya está asignada a un jugador antes de hacerlo.*/
 	public void AssignCorporationToPlayers(List<Corporations> corporations) 
 	{
 		List<Players> players = this.Llistar();

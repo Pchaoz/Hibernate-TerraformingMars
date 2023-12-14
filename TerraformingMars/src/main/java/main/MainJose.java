@@ -13,7 +13,9 @@ import DAO.DAOMakers;
 import DAO.DAOPlayer;
 import Models.Corporations;
 import Models.Games;
+import Models.Makers;
 import Models.Players;
+import Models.TypeMaker;
 
 
 
@@ -51,6 +53,8 @@ public class MainJose {
 
 	}
 	
+	
+	/*Función que se encarga de resolver el turno del jugador. Lanza los dados y resuelve la tirada*/
 	public static void RollDices(Players player, Games partida) 
 	{
 		int [] dados = new int [6];
@@ -61,7 +65,8 @@ public class MainJose {
 		System.out.print("El jugador " + player.getName() + " ha sacado los resultados: ");
 		PrintDices(dados);
 		ResolveDices(player.getCor(), dados, partida);
-		CheckWinConditions(partida.getIdGame());
+		Corporations playerCorporation = player.getCor();
+		CheckWinConditions(partida.getIdGame(), playerCorporation);
 	}
 	
 	/* Resolución de dados:
@@ -86,7 +91,8 @@ public class MainJose {
 				System.out.println("Se incrementa la temperatura en 2 nuevamente por obtener seis dados iguales!");
 				return;
 			}
-		}else if(resultados[1] >= 3) {
+		}
+		if(resultados[1] >= 3) {
 			//Incrementar oxigeno
 			daoGames.AddOxygen(partida);
 			System.out.println("Se incrementa el oxigeno en 1.");
@@ -96,7 +102,8 @@ public class MainJose {
 				System.out.println("Se incrementa el oxigeno en 1 nuevamente por obtener seis dados iguales!");
 				return;
 			}
-		}else if(resultados[2] >= 3) {
+		}
+		if(resultados[2] >= 3) {
 			//Asociar casilla oceano
 			System.out.println("Se asocia una casilla oceano.");
 			if(resultados[2] == 6) {
@@ -104,11 +111,13 @@ public class MainJose {
 				System.out.println("Se asocia otra casilla oceano nuevamente por obtener seis dados iguales!");
 				return;
 			}
-		}else if(resultados[3] >= 4) {
+		}
+		if(resultados[3] >= 4) {
 			//Asociar casilla Jungla
 			System.out.println("Se asocia una casilla bosque.");
 			return;
-		}else if(resultados[4] >= 3) {
+		}
+		if(resultados[4] >= 3) {
 			//Asociar ciudad
 			System.out.println("Se asocia una casilla ciudad.");
 			if(resultados[4] == 6) {
@@ -116,7 +125,8 @@ public class MainJose {
 				System.out.println("Se asocia otra casilla ciudad nuevamente por obtener seis dados iguales!");
 				return;
 			}
-		}else if(resultados[5] >= 3) {
+		}
+		if(resultados[5] >= 3) {
 			//Incrementar puntos victoria
 			System.out.println("Se incrementa puntos de victoria en 2.");
 			if(resultados[5] == 6) {
@@ -166,9 +176,38 @@ public class MainJose {
 		System.out.println();
 	}
 	
-	public static void CheckWinConditions(int numPartida) {
+	public static void CheckWinConditions(int numPartida, Corporations playerCorporation) 
+	{
 		Games partida = daoGames.Search(numPartida);
-		if(partida.getTemperature() >= 0)
+		System.out.println("Comprobando si se cumplen condiciones de victoria...");
+		if(partida.getTemperature() >= 0) 
+		{
 			isGameover = true;
+			System.out.println("La temperatura ha llegado a 0. Se acaba la partida.");
+		}
+		if(partida.getOxygen() >= 14)
+		{
+			isGameover = true;
+			System.out.println("El oxigeno ha llegado a 14. Se acaba la partida.");
+		}
+		List<Makers> makers = daoMakers.GetMakersByType(TypeMaker.OCEA);
+		boolean oceansBelongToCorporation = CheckAllOceanMakers(makers, playerCorporation);
+		if(oceansBelongToCorporation)
+			isGameover = true;
+		
+	}
+	
+	public static boolean CheckAllOceanMakers(List<Makers> oceanMakers, Corporations playerCorporation)
+	{
+		boolean winCondition = true;
+		for (Makers maker : oceanMakers) {
+			if(!maker.getMakerOwner().equals(playerCorporation) || maker.getMakerOwner() == null)
+			{
+				winCondition = false;
+				return winCondition;
+			}		
+		}
+		System.out.println("Todas las casillas de oceano pertenecen a un jugador. Se acaba la partida.");
+		return winCondition;
 	}
 }

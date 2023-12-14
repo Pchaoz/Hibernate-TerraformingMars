@@ -53,7 +53,7 @@ public class Main {
 		Set<Players> pl = new HashSet<Players>();
 		pl.add(j1);
 		Games gm = new Games(1, 14, 54, LocalDateTime.now(), LocalDateTime.now(),pl, j1);
-		Makers mk = new Makers("Mk1",  3, TypeMaker.Ciutat);
+		Makers mk = new Makers("Mk1",  3, TypeMaker.CIUTAT);
 		
 		session.persist(coor1);
 		session.persist(j1);

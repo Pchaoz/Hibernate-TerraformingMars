@@ -9,8 +9,11 @@ import Models.TypeMaker;
 
 public class DAOMakers extends DAOGeneric<Makers, Integer>{
 
+	static Random rand;
+	
 	public DAOMakers() {
 		super(Makers.class);
+		this.rand = new Random();
 	}
 	
 	//Genera un nuevo Maker y lo guarda en la bbdd
@@ -19,9 +22,22 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		this.Persistir(newMaker);
 	}
 	
+	public TypeMaker SetMakerType()
+	{
+		TypeMaker type = null;
+		int randomNumber = rand.nextInt(3);
+		if(randomNumber == 0)
+			type = TypeMaker.BOSC;
+		if(randomNumber == 1)
+			type = TypeMaker.CIUTAT;
+		if(randomNumber == 2)
+			type = TypeMaker.OCEA;
+		return type;
+	}
 	
 	public void generateMaker(String name, int maxneighbours) {
-		Makers newMaker = new Makers(name, maxneighbours); 
+		TypeMaker type = SetMakerType();
+		Makers newMaker = new Makers(name, maxneighbours, type); 
 		System.out.println("Se genera el maker " + newMaker.toString());
 		this.Persistir(newMaker);
 	}

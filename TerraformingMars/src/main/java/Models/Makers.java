@@ -84,8 +84,15 @@ public class Makers {
 	public void setTypeMaker(TypeMaker typeMaker) {
 		this.typeMaker = typeMaker;
 	}
-
 	
+	public Corporations getMakerOwner() {
+		return MakerOwner;
+	}
+
+	public void setMakerOwner(Corporations makerOwner) {
+		MakerOwner = makerOwner;
+	}
+
 	public Makers(String name, int maxneightbours, TypeMaker typeMaker) {
 		super();
 		this.name = name;
