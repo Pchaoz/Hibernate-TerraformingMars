@@ -47,9 +47,6 @@ public class Makers {
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
 	
-	@ManyToOne
-	@JoinColumn(name="Corporation")
-	private Corporations Copr;
 	
 	
 	public int getIdmakers() {
@@ -74,6 +71,13 @@ public class Makers {
 		return maxneightbours;
 	}
 
+	public Corporations getMakerOwner() {
+		return MakerOwner;
+	}
+
+	public void setMakerOwner(Corporations makerOwner) {
+		MakerOwner = makerOwner;
+	}
 
 	public void setMaxneightbours(int maxneightbours) {
 		this.maxneightbours = maxneightbours;
@@ -88,7 +92,6 @@ public class Makers {
 	public void setTypeMaker(TypeMaker typeMaker) {
 		this.typeMaker = typeMaker;
 	}
-
 	
 	public Makers(String name, int maxneightbours, TypeMaker typeMaker) {
 		super();
@@ -129,8 +132,9 @@ public class Makers {
 
 	@Override
 	public String toString() {
-		return "Makers [idmakers=" + idmakers + ", name=" + name + ", description=" + ", maxneightbours="
-				+ maxneightbours + ", typeMaker=" + typeMaker + "]";
+		return "Makers [idmakers=" + idmakers + ", name=" + name + ", maxneightbours=" + maxneightbours + ", typeMaker="
+				+ typeMaker + ", MakerOwner=" + MakerOwner + ", neightbours=" + neightbours + "]";
 	}
+
 
 }
