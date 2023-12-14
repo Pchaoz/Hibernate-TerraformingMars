@@ -17,7 +17,11 @@ public class MainPol {
 		playerDAO.GeneratePlayers();
 		markersDAO.generarTablero();
 		
+
 		Players p1 = playerDAO.Search(1);
+		Players p2 = playerDAO.Search(2);
+		Players p3 = playerDAO.Search(3);
+		Players p4 = playerDAO.Search(4);
 		Corporations c1 = coorDAO.Search(1);
 		
 		p1.setCor(c1);
@@ -41,6 +45,20 @@ public class MainPol {
 		List<Makers> withC1 = markersDAO.getMakersByCoorp(c1);
 		System.out.println("CASILLAS CON COORPORACION 1: ");
 		System.out.println(withC1.toString());
+		
+		SetVictoryPoints(p1, p2, p3, p4);		
+		
+	}
+	
+	private static void SetVictoryPoints(Players p1, Players p2, Players p3, Players p4) {
+		
+		CheckPointsCoorp(p1.getCor());
+	}
+
+	private static void CheckPointsCoorp(Corporations c) {
+		DAOMakers dmakers = new DAOMakers();
+		
+		List<Makers> cmk = dmakers.getMakersByCoorp(c);
 		
 	}
 }
