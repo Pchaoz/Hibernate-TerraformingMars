@@ -178,23 +178,25 @@ public class MainJose {
 	
 	public static void CheckWinConditions(int numPartida, Corporations playerCorporation) 
 	{
+		int gameConditionRecount = 0;
 		Games partida = daoGames.Search(numPartida);
 		System.out.println("Comprobando si se cumplen condiciones de victoria...");
 		if(partida.getTemperature() >= 0) 
 		{
-			isGameover = true;
-			System.out.println("La temperatura ha llegado a 0. Se acaba la partida.");
+			gameConditionRecount++;
+			System.out.println("La temperatura ha llegado a 0. Se cumple una condicion de partida terminada.");
 		}
 		if(partida.getOxygen() >= 14)
 		{
-			isGameover = true;
-			System.out.println("El oxigeno ha llegado a 14. Se acaba la partida.");
+			gameConditionRecount++;
+			System.out.println("El oxigeno ha llegado a 14. Se cumple una condicion de partida terminada.");
 		}
 		List<Makers> makers = daoMakers.GetMakersByType(TypeMaker.OCEA);
 		boolean oceansBelongToCorporation = CheckAllOceanMakers(makers, playerCorporation);
 		if(oceansBelongToCorporation)
+			gameConditionRecount++;
+		if(gameConditionRecount >= 2)
 			isGameover = true;
-		
 	}
 	
 	public static boolean CheckAllOceanMakers(List<Makers> oceanMakers, Corporations playerCorporation)
@@ -207,7 +209,7 @@ public class MainJose {
 				return winCondition;
 			}		
 		}
-		System.out.println("Todas las casillas de oceano pertenecen a un jugador. Se acaba la partida.");
+		System.out.println("Todas las casillas de oceano pertenecen a un jugador. Se cumple una condicion de partida terminada.");
 		return winCondition;
 	}
 }
