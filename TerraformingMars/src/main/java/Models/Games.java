@@ -63,6 +63,77 @@ public class Games {
 		Temperature = temperature;
 		Oceans = oceans;
 	}
+
+	public int getIdGame() {
+		return idGame;
+	}
+
+	public void setIdGame(int idGame) {
+		this.idGame = idGame;
+	}
+
+	public int getOxygen() {
+		return Oxygen;
+	}
+
+	public void setOxygen(int oxygen) {
+		Oxygen = oxygen;
+	}
+
+	public int getTemperature() {
+		return Temperature;
+	}
+
+	public void setTemperature(int temperature) {
+		Temperature = temperature;
+	}
+
+	public int getOceans() {
+		return Oceans;
+	}
+
+	public void setOceans(int oceans) {
+		Oceans = oceans;
+	}
+
+	public LocalDateTime getDateStart() {
+		return DateStart;
+	}
+
+	public void setDateStart(LocalDateTime dateStart) {
+		DateStart = dateStart;
+	}
+
+	public LocalDateTime getEndDateTime() {
+		return EndDateTime;
+	}
+
+	public void setEndDateTime(LocalDateTime endDateTime) {
+		EndDateTime = endDateTime;
+	}
+
+	public Set<Players> getJugadors() {
+		return Jugadors;
+	}
+
+	public void setJugadors(Set<Players> jugadors) {
+		Jugadors = jugadors;
+	}
+
+	public Players getGuanyador() {
+		return Guanyador;
+	}
+
+	public void setGuanyador(Players guanyador) {
+		Guanyador = guanyador;
+	}
+
+	@Override
+	public String toString() {
+		return "Games [idGame=" + idGame + ", Oxygen=" + Oxygen + ", Temperature=" + Temperature + ", Oceans=" + Oceans
+				+ ", DateStart=" + DateStart + ", EndDateTime=" + EndDateTime + ", Jugadors=" + Jugadors
+				+ ", Guanyador=" + Guanyador + "]";
+	}
 	
 	
 }

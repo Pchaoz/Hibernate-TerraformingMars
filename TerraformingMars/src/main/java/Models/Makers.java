@@ -35,20 +35,20 @@ public class Makers {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "TypeMaker")
 	TypeMaker typeMaker;
-	
+
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	Corporations MakerOwner;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
-			name="MakersNeightbours", //NOM COLUMNA 
+			name="MakersNeightbours", //NOM COLUMNA
 			joinColumns = @JoinColumn(name="id_maker"), //NOM CLAU QUE PORTA EL PES
 			inverseJoinColumns = @JoinColumn(name="id_neightbour") //NOM DE LA CLAU QUE NO PORTA EL PES
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
-	
-	
-	
+
+
+
 	public int getIdmakers() {
 		return idmakers;
 	}
@@ -92,14 +92,14 @@ public class Makers {
 	public void setTypeMaker(TypeMaker typeMaker) {
 		this.typeMaker = typeMaker;
 	}
-	
+
 	public Makers(String name, int maxneightbours, TypeMaker typeMaker) {
 		super();
 		this.name = name;
 		this.maxneightbours = maxneightbours;
 		this.typeMaker = typeMaker;
 	}
-	
+
 	public Makers(String name, int maxneighbours) {
 		super();
 		this.maxneightbours = maxneighbours;

@@ -58,6 +58,8 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 	public void AddMakersPosibleNeightbour(Makers m1, Makers m2) {
 		m1.AddNeightbour(m2);
 		m2.AddNeightbour(m1);
+		this.update(m2);
+		this.update(m1);
 	}
 	public Makers GetRandomMakerNoNeightbour() {
 		Random r = new Random();
