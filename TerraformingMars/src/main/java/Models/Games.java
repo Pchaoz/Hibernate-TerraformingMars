@@ -7,6 +7,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,7 @@ public class Games {
 	private LocalDateTime DateStart = LocalDateTime.now();
 	@Column
 	private LocalDateTime EndDateTime = null;
-	@ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE}, targetEntity = Players.class)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE}, targetEntity = Players.class)
 	@JoinTable(name ="PlayerGames", joinColumns = @JoinColumn(name ="PartidaID"), inverseJoinColumns = @JoinColumn(name="JugadorId"))
 	private Set<Players> Jugadors = new HashSet<Players>();
 	@ManyToOne
@@ -76,6 +77,11 @@ public class Games {
 		return Oxygen;
 	}
 
+	public void addOxygen(int oxygen)
+	{
+		Oxygen += oxygen;
+	}
+	
 	public void setOxygen(int oxygen) {
 		Oxygen = oxygen;
 	}
@@ -84,6 +90,11 @@ public class Games {
 		return Temperature;
 	}
 
+	public void addTemperature(int temperature)
+	{
+		Temperature += temperature;
+	}
+	
 	public void setTemperature(int temperature) {
 		Temperature = temperature;
 	}
@@ -114,6 +125,11 @@ public class Games {
 
 	public Set<Players> getJugadors() {
 		return Jugadors;
+	}
+	
+	public void addJugadors(Players player)
+	{
+	    Jugadors.add(player);
 	}
 
 	public void setJugadors(Set<Players> jugadors) {

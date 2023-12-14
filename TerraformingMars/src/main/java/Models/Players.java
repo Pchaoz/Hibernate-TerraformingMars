@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +33,7 @@ public class Players {
 	private int Wins = 0;
 	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
 	private Corporations cor;
-	@ManyToMany(mappedBy = "Jugadors")
+	@ManyToMany(mappedBy = "Jugadors", cascade = {CascadeType.MERGE})
 	private Set<Games> Partides = new HashSet<Games>();
 	@OneToMany(mappedBy = "Guanyador")
 	private Set<Games> Guanyades = new HashSet<Games>();

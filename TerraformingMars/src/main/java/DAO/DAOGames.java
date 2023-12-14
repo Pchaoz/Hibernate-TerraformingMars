@@ -1,6 +1,10 @@
 package DAO;
 
+import java.util.List;
+import java.util.Set;
+
 import Models.Games;
+import Models.Players;
 
 public class DAOGames extends DAOGeneric<Games, Integer>{
 
@@ -17,5 +21,24 @@ public class DAOGames extends DAOGeneric<Games, Integer>{
 		this.Persistir(g);
 	}
 	
+	public void AssignPlayersToCurrentGame(List<Players> players, Games game)
+	{
+		for (Players player : players) {
+			game.addJugadors(player);
+		}
+		this.update(game);
+	}
+	
+	public void AddTemperature(Games game)
+	{
+		game.addTemperature(2);
+		this.update(game);
+	}
+	
+	public void AddOxygen(Games game)
+	{
+		game.addOxygen(1);
+		this.update(game);
+	}
 	
 }

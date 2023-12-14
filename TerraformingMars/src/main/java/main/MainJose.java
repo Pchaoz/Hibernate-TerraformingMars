@@ -8,36 +8,50 @@ import java.util.List;
 import java.util.Random;
 
 import DAO.DAOCorporation;
+import DAO.DAOGames;
 import DAO.DAOMakers;
 import DAO.DAOPlayer;
 import Models.Corporations;
+import Models.Games;
 import Models.Players;
+
+
 
 public class MainJose {
 	
 	private static Random rand = new Random();
+	private static DAOMakers daoMakers = new DAOMakers();
+	private static DAOPlayer daoPlayers = new DAOPlayer();
+	private static DAOCorporation daoCorporation = new DAOCorporation();
+	private static DAOGames daoGames = new DAOGames();
+	private static boolean isGameover = false;
 	
 	public static void main(String[] args) {
 
-		DAOMakers daoMakers = new DAOMakers();
-		DAOPlayer daoPlayers = new DAOPlayer();
-		DAOCorporation daoCorporation = new DAOCorporation();
+
+		
+		int numPartida = 1;
+		isGameover = false;
 
 		daoMakers.generarTablero();
+		daoGames.GenerateGames();
+		Games partida = daoGames.Search(numPartida);
 		daoCorporation.StartCorporations();
 		List<Corporations> corporations = daoCorporation.Llistar();
 		daoPlayers.GeneratePlayers();
 		daoPlayers.AssignCorporationToPlayers(corporations);
 		List<Players> players = daoPlayers.Llistar();
+		daoGames.AssignPlayersToCurrentGame(players, partida);
+		
 		Players playerActual = players.get(0);
 		
-		RollDices(playerActual);
-		RollDices(playerActual);
-		RollDices(playerActual);
+		RollDices(playerActual, partida);
+		RollDices(playerActual, partida);
+		RollDices(playerActual, partida);
 
 	}
 	
-	public static void RollDices(Players player) 
+	public static void RollDices(Players player, Games partida) 
 	{
 		int [] dados = new int [6];
 		for (int i = 0; i < dados.length; i++) {
@@ -46,7 +60,8 @@ public class MainJose {
 		}
 		System.out.print("El jugador " + player.getName() + " ha sacado los resultados: ");
 		PrintDices(dados);
-		ResolveDices(player.getCor(), dados);
+		ResolveDices(player.getCor(), dados, partida);
+		CheckWinConditions(partida.getIdGame());
 	}
 	
 	/* Resolución de dados:
@@ -58,23 +73,27 @@ public class MainJose {
 	 * 6- Puntos de Victoria - Por cada 3 dados, se suman 2 puntos de victoria a la corporacion
 	 */
 	
-	public static void ResolveDices(Corporations playerCorporation, int[] dices)
+	public static void ResolveDices(Corporations playerCorporation, int[] dices, Games partida)
 	{
 		int [] resultados = RecountDices(dices);
 		if(resultados[0] >= 3) {
 			//Incrementar Temperatura
+			daoGames.AddTemperature(partida);
 			System.out.println("Se incrementa la temperatura en 2.");
 			if(resultados[0] == 6) {
 				//Incrementar Temperatura
-				System.out.println("Se incrementa la temperatura en 2.");
+				daoGames.AddTemperature(partida);
+				System.out.println("Se incrementa la temperatura en 2 nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}else if(resultados[1] >= 3) {
 			//Incrementar oxigeno
+			daoGames.AddOxygen(partida);
 			System.out.println("Se incrementa el oxigeno en 1.");
 			if(resultados[1] == 6) {
 				//Incrementar oxigeno
-				System.out.println("Se incrementa el oxigeno en 1.");
+				daoGames.AddOxygen(partida);
+				System.out.println("Se incrementa el oxigeno en 1 nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}else if(resultados[2] >= 3) {
@@ -82,7 +101,7 @@ public class MainJose {
 			System.out.println("Se asocia una casilla oceano.");
 			if(resultados[2] == 6) {
 				//Asociar casilla oceano
-				System.out.println("Se asocia una casilla oceano.");
+				System.out.println("Se asocia otra casilla oceano nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}else if(resultados[3] >= 4) {
@@ -94,7 +113,7 @@ public class MainJose {
 			System.out.println("Se asocia una casilla ciudad.");
 			if(resultados[4] == 6) {
 				//Asociar ciudad
-				System.out.println("Se asocia una casilla ciudad.");
+				System.out.println("Se asocia otra casilla ciudad nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}else if(resultados[5] >= 3) {
@@ -102,7 +121,7 @@ public class MainJose {
 			System.out.println("Se incrementa puntos de victoria en 2.");
 			if(resultados[5] == 6) {
 				//Incrementar puntos victoria
-				System.out.println("Se incrementa puntos de victoria en 2.");
+				System.out.println("Se incrementa puntos de victoria en 2 nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		} else {
@@ -145,5 +164,11 @@ public class MainJose {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
+	}
+	
+	public static void CheckWinConditions(int numPartida) {
+		Games partida = daoGames.Search(numPartida);
+		if(partida.getTemperature() >= 0)
+			isGameover = true;
 	}
 }
