@@ -25,6 +25,7 @@ public class DAOGames extends DAOGeneric<Games, Integer>{
 	{
 		for (Players player : players) {
 			game.addJugadors(player);
+			//player.
 		}
 		this.update(game);
 	}

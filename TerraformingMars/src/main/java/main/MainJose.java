@@ -11,6 +11,7 @@ import DAO.DAOCorporation;
 import DAO.DAOGames;
 import DAO.DAOMakers;
 import DAO.DAOPlayer;
+import DAO.Utils;
 import Models.Corporations;
 import Models.Games;
 import Models.Makers;
@@ -29,9 +30,7 @@ public class MainJose {
 	private static boolean isGameover = false;
 	
 	public static void main(String[] args) {
-
-
-		
+	
 		int numPartida = 1;
 		isGameover = false;
 
@@ -50,6 +49,8 @@ public class MainJose {
 		RollDices(playerActual, partida);
 		RollDices(playerActual, partida);
 		RollDices(playerActual, partida);
+		
+		Utils.close();
 
 	}
 	
@@ -66,7 +67,7 @@ public class MainJose {
 		PrintDices(dados);
 		ResolveDices(player.getCor(), dados, partida);
 		Corporations playerCorporation = player.getCor();
-		CheckWinConditions(partida.getIdGame(), playerCorporation);
+		//CheckWinConditions(partida.getIdGame(), playerCorporation);
 	}
 	
 	/* Resolución de dados:

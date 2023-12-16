@@ -16,7 +16,7 @@
 		<property name="hibernate.connection.password">super3</property>
 		<!--Esta es importante y la trataremos mas tarde -->
 		<property name="hibernate.hbm2ddl.auto">create</property>
-		<property name="show_sql">true</property>
+		<property name="show_sql">false</property>
 		<!-- Specifying Session Context -->
 		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
 		<!-- AQUI POSEU LES CLASSES QUE REPRESENTEN TAULES QUE FEU SERVIR -->
