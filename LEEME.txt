@@ -1,0 +1,7 @@
+Cosas a comentar:
+
+- No he sabido controlar el caso donde los dos últimos Makers que quedan por anexarse como vecinos ya tienen una relación entre ellos existente.
+Eso provocaba que se quedara en bucle intentando conectarlos, pero al ser un Set, no termina de conectarlos.
+Lo que he hecho es que si se da este caso, regenere el tablero de nuevo, por lo que si el tablero se intenta construir varias veces es por este caso.
+
+Jose, Pol, Alex.
