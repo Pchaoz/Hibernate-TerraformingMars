@@ -33,7 +33,7 @@ public class Players {
 	private int Wins = 0;
 	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
 	private Corporations cor;
-	@ManyToMany(mappedBy = "Jugadors", cascade = {CascadeType.MERGE})
+	@ManyToMany(mappedBy = "Jugadors") //Me cargo el cascade
 	private Set<Games> Partides = new HashSet<Games>();
 	@OneToMany(mappedBy = "Guanyador")
 	private Set<Games> Guanyades = new HashSet<Games>();

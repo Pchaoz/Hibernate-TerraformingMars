@@ -15,7 +15,7 @@ public class MainPol {
 		
 		coorDAO.StartCorporations();
 		playerDAO.GeneratePlayers();
-		markersDAO.generarTablero();
+		markersDAO.regenerarTablero(true);
 		
 
 		Players p1 = playerDAO.Search(1);

@@ -70,14 +70,6 @@ public class Makers {
 		return maxneightbours;
 	}
 
-	public Corporations getMakerOwner() {
-		return MakerOwner;
-	}
-
-	public void setMakerOwner(Corporations makerOwner) {
-		MakerOwner = makerOwner;
-	}
-
 	public void setMaxneightbours(int maxneightbours) {
 		this.maxneightbours = maxneightbours;
 	}

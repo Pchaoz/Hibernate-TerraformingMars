@@ -100,9 +100,7 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		}
 		System.out.println("Makers conectados!");
 	}
-	
-	
-	
+		
 	//Método que devuelve una lista con todos los makers de un tipo concreto.
 	public ArrayList<Makers> GetMakersByType(TypeMaker tm) 
 	{
@@ -275,5 +273,12 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 			}
 		}
 		return mkNoCoorp;
-}
+	}
+	
+	public void setMakerToCorporation(Makers maker, Corporations corporation)
+	{
+		maker.setMakerOwner(corporation);
+		this.update(maker);
+	}
+
 }

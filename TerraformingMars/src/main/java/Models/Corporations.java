@@ -28,7 +28,7 @@ public class Corporations {
 	@OneToOne(mappedBy = "cor", cascade = CascadeType.PERSIST)
 	private Players player;
 	
-	@OneToMany(mappedBy = "MakerOwner", cascade = CascadeType.PERSIST)
+	@OneToMany(mappedBy = "MakerOwner", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
 	private Set<Makers> coorporationMakers;
 	
 	public Corporations() {
@@ -75,6 +75,11 @@ public class Corporations {
 
 	public int getVictorypoints() {
 		return Victorypoints;
+	}
+	
+	public void addVictorypoints(int number)
+	{
+		Victorypoints += number;
 	}
 
 	public void setVictorypoints(int victorypoints) {

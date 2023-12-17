@@ -34,7 +34,7 @@ public class Games {
 	private LocalDateTime DateStart = LocalDateTime.now();
 	@Column
 	private LocalDateTime EndDateTime = null;
-	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE}, targetEntity = Players.class)
+	@ManyToMany(fetch = FetchType.EAGER, targetEntity = Players.class)
 	@JoinTable(name ="PlayerGames", joinColumns = @JoinColumn(name ="PartidaID"), inverseJoinColumns = @JoinColumn(name="JugadorId"))
 	private Set<Players> Jugadors = new HashSet<Players>();
 	@ManyToOne
