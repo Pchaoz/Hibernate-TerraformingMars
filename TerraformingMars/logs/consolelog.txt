@@ -1,0 +1,1582 @@
+Generando piezas del tablero...
+Se genera el maker Makers [idmakers=0, name=Maker 1, description=, maxneightbours=3, typeMaker=OCEA]
+dic 17, 2023 4:56:29 P. M. org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 5.6.15.Final
+dic 17, 2023 4:56:29 P. M. org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+dic 17, 2023 4:56:29 P. M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+dic 17, 2023 4:56:29 P. M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Mars]
+dic 17, 2023 4:56:29 P. M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=root}
+dic 17, 2023 4:56:29 P. M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+dic 17, 2023 4:56:29 P. M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+dic 17, 2023 4:56:30 P. M. org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+dic 17, 2023 4:56:30 P. M. org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@606a1bc4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+dic 17, 2023 4:56:30 P. M. org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@667dcaad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Se genera el maker Makers [idmakers=0, name=Maker 2, description=, maxneightbours=3, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 3, description=, maxneightbours=3, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 4, description=, maxneightbours=3, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 5, description=, maxneightbours=3, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 6, description=, maxneightbours=3, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 7, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 8, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 9, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 10, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 11, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 12, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 13, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 14, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 15, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 16, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 17, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 18, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 19, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 20, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 21, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 22, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 23, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 24, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 25, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 26, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 27, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 28, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 29, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 30, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 31, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 32, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 33, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 34, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 35, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 36, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 37, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 38, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 39, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 40, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 41, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 42, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 43, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 44, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 45, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 46, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 47, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 48, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 49, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 50, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 51, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 52, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 53, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 54, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 55, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 56, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 57, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 58, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 59, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 60, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 61, description=, maxneightbours=6, typeMaker=OCEA]
+Makers generados. Conectandolos con otros makers...
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 7 y el maker 47
+Intentando vincular el maker 7 con el maker 47
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 48 y el maker 26
+Intentando vincular el maker 48 con el maker 26
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 53 y el maker 49
+Intentando vincular el maker 53 con el maker 49
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 56 y el maker 10
+Intentando vincular el maker 56 con el maker 10
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 34 y el maker 54
+Intentando vincular el maker 34 con el maker 54
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 40 y el maker 8
+Intentando vincular el maker 40 con el maker 8
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 53 y el maker 41
+Intentando vincular el maker 53 con el maker 41
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 50 y el maker 51
+Intentando vincular el maker 50 con el maker 51
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 3
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 4 y el maker 33
+Intentando vincular el maker 4 con el maker 33
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 29 y el maker 38
+Intentando vincular el maker 29 con el maker 38
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 3
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 6 y el maker 50
+Intentando vincular el maker 6 con el maker 50
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 37 y el maker 3
+Intentando vincular el maker 37 con el maker 3
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 28 y el maker 7
+Intentando vincular el maker 28 con el maker 7
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 11 y el maker 59
+Intentando vincular el maker 11 con el maker 59
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 34 y el maker 17
+Intentando vincular el maker 34 con el maker 17
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 41 y el maker 48
+Intentando vincular el maker 41 con el maker 48
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 29 y el maker 4
+Intentando vincular el maker 29 con el maker 4
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 51 y el maker 51
+El maker es el mismo
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 55 y el maker 8
+Intentando vincular el maker 55 con el maker 8
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 43 y el maker 31
+Intentando vincular el maker 43 con el maker 31
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 22 y el maker 10
+Intentando vincular el maker 22 con el maker 10
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 39 y el maker 58
+Intentando vincular el maker 39 con el maker 58
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 20 y el maker 47
+Intentando vincular el maker 20 con el maker 47
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 3
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 3 y el maker 42
+Intentando vincular el maker 3 con el maker 42
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 30 y el maker 58
+Intentando vincular el maker 30 con el maker 58
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 35 y el maker 21
+Intentando vincular el maker 35 con el maker 21
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 15 y el maker 51
+Intentando vincular el maker 15 con el maker 51
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 59 y el maker 32
+Intentando vincular el maker 59 con el maker 32
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 36 y el maker 57
+Intentando vincular el maker 36 con el maker 57
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 3 y el maker 8
+Intentando vincular el maker 3 con el maker 8
+Cantidad lista:60
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 3
+Se recibe el maker 31 y el maker 4
+Intentando vincular el maker 31 con el maker 4
+Cantidad lista:59
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 44 y el maker 29
+Intentando vincular el maker 44 con el maker 29
+Cantidad lista:59
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 36 y el maker 7
+Intentando vincular el maker 36 con el maker 7
+Cantidad lista:59
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 19 y el maker 13
+Intentando vincular el maker 19 con el maker 13
+Cantidad lista:59
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 55 y el maker 2
+Intentando vincular el maker 55 con el maker 2
+Cantidad lista:59
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 16 y el maker 25
+Intentando vincular el maker 16 con el maker 25
+Cantidad lista:59
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 41 y el maker 18
+Intentando vincular el maker 41 con el maker 18
+Cantidad lista:59
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 31 y el maker 60
+Intentando vincular el maker 31 con el maker 60
+Cantidad lista:59
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 21 y el maker 46
+Intentando vincular el maker 21 con el maker 46
+Cantidad lista:59
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 53 y el maker 55
+Intentando vincular el maker 53 con el maker 55
+Cantidad lista:59
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 46 y el maker 1
+Intentando vincular el maker 46 con el maker 1
+Cantidad lista:59
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 46 y el maker 9
+Intentando vincular el maker 46 con el maker 9
+Cantidad lista:59
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 36 y el maker 37
+Intentando vincular el maker 36 con el maker 37
+Cantidad lista:59
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 23 y el maker 7
+Intentando vincular el maker 23 con el maker 7
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 33 y el maker 32
+Intentando vincular el maker 33 con el maker 32
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 38 y el maker 9
+Intentando vincular el maker 38 con el maker 9
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 54 y el maker 41
+Intentando vincular el maker 54 con el maker 41
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 33 y el maker 56
+Intentando vincular el maker 33 con el maker 56
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 32 y el maker 15
+Intentando vincular el maker 32 con el maker 15
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 10 y el maker 56
+El maker 10 contiene al maker 56. El hashset ignora esta relación.
+Cantidad lista:58
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 24 y el maker 59
+Intentando vincular el maker 24 con el maker 59
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 58 y el maker 16
+Intentando vincular el maker 58 con el maker 16
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 43 y el maker 32
+Intentando vincular el maker 43 con el maker 32
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 39 y el maker 23
+Intentando vincular el maker 39 con el maker 23
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 17 y el maker 49
+Intentando vincular el maker 17 con el maker 49
+Cantidad lista:58
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 55 y el maker 13
+Intentando vincular el maker 55 con el maker 13
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 23 y el maker 13
+Intentando vincular el maker 23 con el maker 13
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 40 y el maker 23
+Intentando vincular el maker 40 con el maker 23
+Cantidad lista:57
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 30 y el maker 21
+Intentando vincular el maker 30 con el maker 21
+Cantidad lista:57
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 32 y el maker 12
+Intentando vincular el maker 32 con el maker 12
+Cantidad lista:57
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 9 y el maker 2
+Intentando vincular el maker 9 con el maker 2
+Cantidad lista:57
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 2 y el maker 44
+Intentando vincular el maker 2 con el maker 44
+Cantidad lista:56
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 32 y el maker 54
+Intentando vincular el maker 32 con el maker 54
+Cantidad lista:55
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 51 y el maker 10
+Intentando vincular el maker 51 con el maker 10
+Cantidad lista:55
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 61 y el maker 10
+Intentando vincular el maker 61 con el maker 10
+Cantidad lista:54
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 40 y el maker 60
+Intentando vincular el maker 40 con el maker 60
+Cantidad lista:54
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 45 y el maker 46
+Intentando vincular el maker 45 con el maker 46
+Cantidad lista:54
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 55 y el maker 52
+Intentando vincular el maker 55 con el maker 52
+Cantidad lista:54
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 35 y el maker 49
+Intentando vincular el maker 35 con el maker 49
+Cantidad lista:54
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 11 y el maker 34
+Intentando vincular el maker 11 con el maker 34
+Cantidad lista:54
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 51 y el maker 16
+Intentando vincular el maker 51 con el maker 16
+Cantidad lista:54
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 59 y el maker 17
+Intentando vincular el maker 59 con el maker 17
+Cantidad lista:54
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 35 y el maker 26
+Intentando vincular el maker 35 con el maker 26
+Cantidad lista:54
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 43 y el maker 42
+Intentando vincular el maker 43 con el maker 42
+Cantidad lista:54
+El maker tiene 1 y el maker puede tener 3
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 6 y el maker 41
+Intentando vincular el maker 6 con el maker 41
+Cantidad lista:54
+El maker tiene 0 y el maker puede tener 3
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 5 y el maker 59
+Intentando vincular el maker 5 con el maker 59
+Cantidad lista:54
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 24 y el maker 37
+Intentando vincular el maker 24 con el maker 37
+Cantidad lista:54
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 42 y el maker 53
+Intentando vincular el maker 42 con el maker 53
+Cantidad lista:54
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 9 y el maker 15
+Intentando vincular el maker 9 con el maker 15
+Cantidad lista:53
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 59 y el maker 42
+Intentando vincular el maker 59 con el maker 42
+Cantidad lista:52
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 26 y el maker 1
+Intentando vincular el maker 26 con el maker 1
+Cantidad lista:52
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 26 y el maker 47
+Intentando vincular el maker 26 con el maker 47
+Cantidad lista:52
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 35 y el maker 60
+Intentando vincular el maker 35 con el maker 60
+Cantidad lista:52
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 47 y el maker 16
+Intentando vincular el maker 47 con el maker 16
+Cantidad lista:51
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 41 y el maker 24
+Intentando vincular el maker 41 con el maker 24
+Cantidad lista:50
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 44 y el maker 45
+Intentando vincular el maker 44 con el maker 45
+Cantidad lista:50
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 29 y el maker 40
+Intentando vincular el maker 29 con el maker 40
+Cantidad lista:50
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 1 y el maker 47
+Intentando vincular el maker 1 con el maker 47
+Cantidad lista:49
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 44 y el maker 54
+Intentando vincular el maker 44 con el maker 54
+Cantidad lista:49
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 38 y el maker 14
+Intentando vincular el maker 38 con el maker 14
+Cantidad lista:49
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 52 y el maker 51
+Intentando vincular el maker 52 con el maker 51
+Cantidad lista:49
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 50 y el maker 13
+Intentando vincular el maker 50 con el maker 13
+Cantidad lista:48
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 56 y el maker 44
+Intentando vincular el maker 56 con el maker 44
+Cantidad lista:48
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 17 y el maker 8
+Intentando vincular el maker 17 con el maker 8
+Cantidad lista:46
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 55 y el maker 35
+Intentando vincular el maker 55 con el maker 35
+Cantidad lista:45
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 40 y el maker 20
+Intentando vincular el maker 40 con el maker 20
+Cantidad lista:45
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 40 y el maker 28
+Intentando vincular el maker 40 con el maker 28
+Cantidad lista:44
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 19 y el maker 29
+Intentando vincular el maker 19 con el maker 29
+Cantidad lista:44
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 11 y el maker 57
+Intentando vincular el maker 11 con el maker 57
+Cantidad lista:44
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 3
+Se recibe el maker 58 y el maker 6
+Intentando vincular el maker 58 con el maker 6
+Cantidad lista:43
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 22 y el maker 19
+Intentando vincular el maker 22 con el maker 19
+Cantidad lista:43
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 51 y el maker 44
+Intentando vincular el maker 51 con el maker 44
+Cantidad lista:41
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 60 y el maker 20
+Intentando vincular el maker 60 con el maker 20
+Cantidad lista:41
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 30 y el maker 35
+Intentando vincular el maker 30 con el maker 35
+Cantidad lista:40
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 20 y el maker 60
+El maker 20 contiene al maker 60. El hashset ignora esta relación.
+Cantidad lista:40
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 49 y el maker 12
+Intentando vincular el maker 49 con el maker 12
+Cantidad lista:40
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 52 y el maker 52
+El maker es el mismo
+Cantidad lista:40
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 53 y el maker 26
+Intentando vincular el maker 53 con el maker 26
+Cantidad lista:40
+El maker tiene 1 y el maker puede tener 3
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 5 y el maker 20
+Intentando vincular el maker 5 con el maker 20
+Cantidad lista:39
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 28 y el maker 58
+Intentando vincular el maker 28 con el maker 58
+Cantidad lista:39
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 18 y el maker 46
+Intentando vincular el maker 18 con el maker 46
+Cantidad lista:39
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 31 y el maker 48
+Intentando vincular el maker 31 con el maker 48
+Cantidad lista:39
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 54 y el maker 37
+Intentando vincular el maker 54 con el maker 37
+Cantidad lista:39
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 48 y el maker 57
+Intentando vincular el maker 48 con el maker 57
+Cantidad lista:39
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 22 y el maker 47
+Intentando vincular el maker 22 con el maker 47
+Cantidad lista:38
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 50 y el maker 24
+Intentando vincular el maker 50 con el maker 24
+Cantidad lista:37
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 45 y el maker 26
+Intentando vincular el maker 45 con el maker 26
+Cantidad lista:36
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 25 y el maker 14
+Intentando vincular el maker 25 con el maker 14
+Cantidad lista:36
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 28 y el maker 58
+El maker 28 contiene al maker 58. El hashset ignora esta relación.
+Cantidad lista:36
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 39 y el maker 15
+Intentando vincular el maker 39 con el maker 15
+Cantidad lista:35
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 38 y el maker 45
+Intentando vincular el maker 38 con el maker 45
+Cantidad lista:35
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 43 y el maker 50
+Intentando vincular el maker 43 con el maker 50
+Cantidad lista:35
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 49 y el maker 21
+Intentando vincular el maker 49 con el maker 21
+Cantidad lista:34
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 11 y el maker 25
+Intentando vincular el maker 11 con el maker 25
+Cantidad lista:33
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 43 y el maker 42
+El maker 43 contiene al maker 42. El hashset ignora esta relación.
+Cantidad lista:33
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 34 y el maker 53
+Intentando vincular el maker 34 con el maker 53
+Cantidad lista:32
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 54 y el maker 42
+Intentando vincular el maker 54 con el maker 42
+Cantidad lista:31
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 50 y el maker 58
+Intentando vincular el maker 50 con el maker 58
+Cantidad lista:29
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 30 y el maker 25
+Intentando vincular el maker 30 con el maker 25
+Cantidad lista:29
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 33 y el maker 28
+Intentando vincular el maker 33 con el maker 28
+Cantidad lista:29
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 36 y el maker 31
+Intentando vincular el maker 36 con el maker 31
+Cantidad lista:29
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 29 y el maker 56
+Intentando vincular el maker 29 con el maker 56
+Cantidad lista:28
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 5 y el maker 60
+Intentando vincular el maker 5 con el maker 60
+Cantidad lista:27
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 36 y el maker 33
+Intentando vincular el maker 36 con el maker 33
+Cantidad lista:27
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 61 y el maker 25
+Intentando vincular el maker 61 con el maker 25
+Cantidad lista:27
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 56 y el maker 43
+Intentando vincular el maker 56 con el maker 43
+Cantidad lista:27
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 61 y el maker 37
+Intentando vincular el maker 61 con el maker 37
+Cantidad lista:27
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 49 y el maker 57
+Intentando vincular el maker 49 con el maker 57
+Cantidad lista:26
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 61 y el maker 56
+Intentando vincular el maker 61 con el maker 56
+Cantidad lista:25
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 27 y el maker 52
+Intentando vincular el maker 27 con el maker 52
+Cantidad lista:25
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 46 y el maker 30
+Intentando vincular el maker 46 con el maker 30
+Cantidad lista:24
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 45 y el maker 19
+Intentando vincular el maker 45 con el maker 19
+Cantidad lista:23
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 14 y el maker 27
+Intentando vincular el maker 14 con el maker 27
+Cantidad lista:23
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 33 y el maker 28
+El maker 33 contiene al maker 28. El hashset ignora esta relación.
+Cantidad lista:23
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 34 y el maker 18
+Intentando vincular el maker 34 con el maker 18
+Cantidad lista:23
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 12 y el maker 37
+Intentando vincular el maker 12 con el maker 37
+Cantidad lista:22
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 38 y el maker 27
+Intentando vincular el maker 38 con el maker 27
+Cantidad lista:22
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 22 y el maker 60
+Intentando vincular el maker 22 con el maker 60
+Cantidad lista:20
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 57 y el maker 31
+Intentando vincular el maker 57 con el maker 31
+Cantidad lista:19
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 34 y el maker 57
+Intentando vincular el maker 34 con el maker 57
+Cantidad lista:17
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 43 y el maker 38
+Intentando vincular el maker 43 con el maker 38
+Cantidad lista:15
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 33 y el maker 61
+Intentando vincular el maker 33 con el maker 61
+Cantidad lista:14
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 25 y el maker 36
+Intentando vincular el maker 25 con el maker 36
+Cantidad lista:12
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 52 y el maker 30
+Intentando vincular el maker 52 con el maker 30
+Cantidad lista:11
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 39 y el maker 39
+El maker es el mismo
+Cantidad lista:11
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 61 y el maker 52
+Intentando vincular el maker 61 con el maker 52
+Cantidad lista:10
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 45 y el maker 52
+Intentando vincular el maker 45 con el maker 52
+Cantidad lista:8
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 28 y el maker 39
+Intentando vincular el maker 28 con el maker 39
+Cantidad lista:8
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 28 y el maker 14
+Intentando vincular el maker 28 con el maker 14
+Cantidad lista:6
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 42 y el maker 39
+Intentando vincular el maker 42 con el maker 39
+Cantidad lista:5
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 18 y el maker 12
+Intentando vincular el maker 18 con el maker 12
+Cantidad lista:3
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 39 y el maker 39
+El maker es el mismo
+Cantidad lista:3
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 27 y el maker 39
+Intentando vincular el maker 27 con el maker 39
+Cantidad lista:2
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 27 y el maker 48
+Intentando vincular el maker 27 con el maker 48
+Cantidad lista:2
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 48 y el maker 27
+El maker 48 contiene al maker 27. El hashset ignora esta relación.
+Se ha dado el caso de que los dos últimos maker se intentaban asignar entre sí teniendo una relación. Como no he sabido resolver esto, regenero el tablero y a prendre pel cul.
+------------ Eliminando makers anteriores ---------------
+Generando piezas del tablero...
+Se genera el maker Makers [idmakers=0, name=Maker 1, description=, maxneightbours=3, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 2, description=, maxneightbours=3, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 3, description=, maxneightbours=3, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 4, description=, maxneightbours=3, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 5, description=, maxneightbours=3, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 6, description=, maxneightbours=3, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 7, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 8, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 9, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 10, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 11, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 12, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 13, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 14, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 15, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 16, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 17, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 18, description=, maxneightbours=4, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 19, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 20, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 21, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 22, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 23, description=, maxneightbours=4, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 24, description=, maxneightbours=4, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 25, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 26, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 27, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 28, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 29, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 30, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 31, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 32, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 33, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 34, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 35, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 36, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 37, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 38, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 39, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 40, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 41, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 42, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 43, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 44, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 45, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 46, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 47, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 48, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 49, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 50, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 51, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 52, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 53, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 54, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 55, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 56, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 57, description=, maxneightbours=6, typeMaker=OCEA]
+Se genera el maker Makers [idmakers=0, name=Maker 58, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 59, description=, maxneightbours=6, typeMaker=CIUTAT]
+Se genera el maker Makers [idmakers=0, name=Maker 60, description=, maxneightbours=6, typeMaker=BOSC]
+Se genera el maker Makers [idmakers=0, name=Maker 61, description=, maxneightbours=6, typeMaker=OCEA]
+Makers generados. Conectandolos con otros makers...
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 68 y el maker 104
+Intentando vincular el maker 68 con el maker 104
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 101 y el maker 109
+Intentando vincular el maker 101 con el maker 109
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 101 y el maker 107
+Intentando vincular el maker 101 con el maker 107
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 115 y el maker 92
+Intentando vincular el maker 115 con el maker 92
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 108 y el maker 82
+Intentando vincular el maker 108 con el maker 82
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 72 y el maker 68
+Intentando vincular el maker 72 con el maker 68
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 74 y el maker 111
+Intentando vincular el maker 74 con el maker 111
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 103 y el maker 121
+Intentando vincular el maker 103 con el maker 121
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 74 y el maker 80
+Intentando vincular el maker 74 con el maker 80
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 112 y el maker 115
+Intentando vincular el maker 112 con el maker 115
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 100 y el maker 90
+Intentando vincular el maker 100 con el maker 90
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 90 y el maker 112
+Intentando vincular el maker 90 con el maker 112
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 98 y el maker 70
+Intentando vincular el maker 98 con el maker 70
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 113 y el maker 96
+Intentando vincular el maker 113 con el maker 96
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 71 y el maker 71
+El maker es el mismo
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 104 y el maker 117
+Intentando vincular el maker 104 con el maker 117
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 3
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 64 y el maker 62
+Intentando vincular el maker 64 con el maker 62
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 83 y el maker 81
+Intentando vincular el maker 83 con el maker 81
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 120 y el maker 120
+El maker es el mismo
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 101 y el maker 63
+Intentando vincular el maker 101 con el maker 63
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 92 y el maker 92
+El maker es el mismo
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 100 y el maker 100
+El maker es el mismo
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 110 y el maker 66
+Intentando vincular el maker 110 con el maker 66
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 106 y el maker 116
+Intentando vincular el maker 106 con el maker 116
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 110 y el maker 106
+Intentando vincular el maker 110 con el maker 106
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 87 y el maker 104
+Intentando vincular el maker 87 con el maker 104
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 106 y el maker 117
+Intentando vincular el maker 106 con el maker 117
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 71 y el maker 67
+Intentando vincular el maker 71 con el maker 67
+Cantidad lista:61
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 101 y el maker 84
+Intentando vincular el maker 101 con el maker 84
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 70 y el maker 120
+Intentando vincular el maker 70 con el maker 120
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 91 y el maker 66
+Intentando vincular el maker 91 con el maker 66
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 75 y el maker 67
+Intentando vincular el maker 75 con el maker 67
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 3
+Se recibe el maker 120 y el maker 65
+Intentando vincular el maker 120 con el maker 65
+Cantidad lista:61
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 80 y el maker 64
+Intentando vincular el maker 80 con el maker 64
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 70 y el maker 65
+Intentando vincular el maker 70 con el maker 65
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 95 y el maker 103
+Intentando vincular el maker 95 con el maker 103
+Cantidad lista:61
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 78 y el maker 121
+Intentando vincular el maker 78 con el maker 121
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 110 y el maker 85
+Intentando vincular el maker 110 con el maker 85
+Cantidad lista:61
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 64 y el maker 97
+Intentando vincular el maker 64 con el maker 97
+Cantidad lista:60
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 119 y el maker 102
+Intentando vincular el maker 119 con el maker 102
+Cantidad lista:60
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 67 y el maker 81
+Intentando vincular el maker 67 con el maker 81
+Cantidad lista:59
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 82 y el maker 109
+Intentando vincular el maker 82 con el maker 109
+Cantidad lista:59
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 79 y el maker 119
+Intentando vincular el maker 79 con el maker 119
+Cantidad lista:59
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 104 y el maker 70
+Intentando vincular el maker 104 con el maker 70
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 116 y el maker 100
+Intentando vincular el maker 116 con el maker 100
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 121 y el maker 107
+Intentando vincular el maker 121 con el maker 107
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 112 y el maker 81
+Intentando vincular el maker 112 con el maker 81
+Cantidad lista:58
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 112 y el maker 72
+Intentando vincular el maker 112 con el maker 72
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 103 y el maker 63
+Intentando vincular el maker 103 con el maker 63
+Cantidad lista:58
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 86 y el maker 91
+Intentando vincular el maker 86 con el maker 91
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 111 y el maker 100
+Intentando vincular el maker 111 con el maker 100
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 116 y el maker 119
+Intentando vincular el maker 116 con el maker 119
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 63 y el maker 101
+El maker 63 contiene al maker 101. El hashset ignora esta relación.
+Cantidad lista:58
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 74 y el maker 68
+Intentando vincular el maker 74 con el maker 68
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 83 y el maker 115
+Intentando vincular el maker 83 con el maker 115
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 85 y el maker 72
+Intentando vincular el maker 85 con el maker 72
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 86 y el maker 117
+Intentando vincular el maker 86 con el maker 117
+Cantidad lista:58
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 3
+Se recibe el maker 87 y el maker 65
+Intentando vincular el maker 87 con el maker 65
+Cantidad lista:57
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 114 y el maker 97
+Intentando vincular el maker 114 con el maker 97
+Cantidad lista:57
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 120 y el maker 80
+Intentando vincular el maker 120 con el maker 80
+Cantidad lista:57
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 85 y el maker 100
+Intentando vincular el maker 85 con el maker 100
+Cantidad lista:57
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 122 y el maker 94
+Intentando vincular el maker 122 con el maker 94
+Cantidad lista:57
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 85 y el maker 102
+Intentando vincular el maker 85 con el maker 102
+Cantidad lista:56
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 89 y el maker 80
+Intentando vincular el maker 89 con el maker 80
+Cantidad lista:55
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 3
+Se recibe el maker 100 y el maker 62
+Intentando vincular el maker 100 con el maker 62
+Cantidad lista:55
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 94 y el maker 111
+Intentando vincular el maker 94 con el maker 111
+Cantidad lista:55
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 120 y el maker 102
+Intentando vincular el maker 120 con el maker 102
+Cantidad lista:55
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 107 y el maker 98
+Intentando vincular el maker 107 con el maker 98
+Cantidad lista:55
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 120 y el maker 108
+Intentando vincular el maker 120 con el maker 108
+Cantidad lista:55
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 101 y el maker 81
+Intentando vincular el maker 101 con el maker 81
+Cantidad lista:54
+El maker tiene 0 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 93 y el maker 74
+Intentando vincular el maker 93 con el maker 74
+Cantidad lista:53
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 98 y el maker 88
+Intentando vincular el maker 98 con el maker 88
+Cantidad lista:53
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 92 y el maker 104
+Intentando vincular el maker 92 con el maker 104
+Cantidad lista:53
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 104 y el maker 100
+Intentando vincular el maker 104 con el maker 100
+Cantidad lista:51
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 83 y el maker 103
+Intentando vincular el maker 83 con el maker 103
+Cantidad lista:51
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 75 y el maker 82
+Intentando vincular el maker 75 con el maker 82
+Cantidad lista:51
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 110 y el maker 71
+Intentando vincular el maker 110 con el maker 71
+Cantidad lista:51
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 3
+Se recibe el maker 76 y el maker 66
+Intentando vincular el maker 76 con el maker 66
+Cantidad lista:50
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 106 y el maker 109
+Intentando vincular el maker 106 con el maker 109
+Cantidad lista:50
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 109 y el maker 105
+Intentando vincular el maker 109 con el maker 105
+Cantidad lista:50
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 68 y el maker 116
+Intentando vincular el maker 68 con el maker 116
+Cantidad lista:49
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 79 y el maker 108
+Intentando vincular el maker 79 con el maker 108
+Cantidad lista:49
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 87 y el maker 99
+Intentando vincular el maker 87 con el maker 99
+Cantidad lista:49
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 113 y el maker 77
+Intentando vincular el maker 113 con el maker 77
+Cantidad lista:49
+El maker tiene 2 y el maker puede tener 3
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 63 y el maker 86
+Intentando vincular el maker 63 con el maker 86
+Cantidad lista:48
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 4
+Se recibe el maker 78 y el maker 69
+Intentando vincular el maker 78 con el maker 69
+Cantidad lista:48
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 88 y el maker 115
+Intentando vincular el maker 88 con el maker 115
+Cantidad lista:48
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 102 y el maker 96
+Intentando vincular el maker 102 con el maker 96
+Cantidad lista:48
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 3
+Se recibe el maker 83 y el maker 62
+Intentando vincular el maker 83 con el maker 62
+Cantidad lista:46
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 122 y el maker 103
+Intentando vincular el maker 122 con el maker 103
+Cantidad lista:46
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 108 y el maker 98
+Intentando vincular el maker 108 con el maker 98
+Cantidad lista:46
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 97 y el maker 110
+Intentando vincular el maker 97 con el maker 110
+Cantidad lista:46
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 119 y el maker 116
+El maker 119 contiene al maker 116. El hashset ignora esta relación.
+Cantidad lista:46
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 115 y el maker 120
+Intentando vincular el maker 115 con el maker 120
+Cantidad lista:45
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 92 y el maker 69
+Intentando vincular el maker 92 con el maker 69
+Cantidad lista:45
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 112 y el maker 93
+Intentando vincular el maker 112 con el maker 93
+Cantidad lista:45
+El maker tiene 1 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 4
+Se recibe el maker 84 y el maker 75
+Intentando vincular el maker 84 con el maker 75
+Cantidad lista:45
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 0 y el maker puede tener 6
+Se recibe el maker 69 y el maker 118
+Intentando vincular el maker 69 con el maker 118
+Cantidad lista:45
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 112 y el maker 86
+Intentando vincular el maker 112 con el maker 86
+Cantidad lista:44
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 96 y el maker 114
+Intentando vincular el maker 96 con el maker 114
+Cantidad lista:44
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 95 y el maker 77
+Intentando vincular el maker 95 con el maker 77
+Cantidad lista:44
+El maker tiene 3 y el maker puede tener 4
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 75 y el maker 92
+Intentando vincular el maker 75 con el maker 92
+Cantidad lista:43
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 92 y el maker 109
+Intentando vincular el maker 92 con el maker 109
+Cantidad lista:43
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 105 y el maker 106
+Intentando vincular el maker 105 con el maker 106
+Cantidad lista:43
+El maker tiene 0 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 73 y el maker 106
+Intentando vincular el maker 73 con el maker 106
+Cantidad lista:42
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 95 y el maker 118
+Intentando vincular el maker 95 con el maker 118
+Cantidad lista:42
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 4
+Se recibe el maker 116 y el maker 76
+Intentando vincular el maker 116 con el maker 76
+Cantidad lista:42
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 77 y el maker 94
+Intentando vincular el maker 77 con el maker 94
+Cantidad lista:42
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 102 y el maker 108
+Intentando vincular el maker 102 con el maker 108
+Cantidad lista:42
+El maker tiene 1 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 89 y el maker 88
+Intentando vincular el maker 89 con el maker 88
+Cantidad lista:42
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 76 y el maker 110
+Intentando vincular el maker 76 con el maker 110
+Cantidad lista:41
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 4 y el maker puede tener 6
+Se recibe el maker 113 y el maker 98
+Intentando vincular el maker 113 con el maker 98
+Cantidad lista:41
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 94 y el maker 103
+Intentando vincular el maker 94 con el maker 103
+Cantidad lista:40
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 6
+Se recibe el maker 96 y el maker 121
+Intentando vincular el maker 96 con el maker 121
+Cantidad lista:40
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 121 y el maker 72
+Intentando vincular el maker 121 con el maker 72
+Cantidad lista:39
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 1 y el maker puede tener 6
+Se recibe el maker 108 y el maker 99
+Intentando vincular el maker 108 con el maker 99
+Cantidad lista:38
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 3 y el maker puede tener 4
+Se recibe el maker 87 y el maker 77
+Intentando vincular el maker 87 con el maker 77
+Cantidad lista:37
+El maker tiene 4 y el maker puede tener 6
+El maker tiene 2 y el maker puede tener 6
+Se recibe el maker 96 y el maker 99
+Intentando vincular el maker 96 con el maker 99
+Cantidad lista:37
+El maker tiene 2 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 105 y el maker 121
+Intentando vincular el maker 105 con el maker 121
+Cantidad lista:36
+El maker tiene 3 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 113 y el maker 109
+Intentando vincular el maker 113 con el maker 109
+Cantidad lista:35
+El maker tiene 2 y el maker puede tener 4
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 79 y el maker 115
+Intentando vincular el maker 79 con el maker 115
+Cantidad lista:34
+El maker tiene 5 y el maker puede tener 6
+El maker tiene 5 y el maker puede tener 6
+Se recibe el maker 116 y el maker 98

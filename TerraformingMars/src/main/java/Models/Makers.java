@@ -36,11 +36,11 @@ public class Makers {
 	@Column(name = "TypeMaker")
 	TypeMaker typeMaker;
 	
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="Corporation")
 	Corporations MakerOwner;
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
 	@JoinTable(
 			name="MakersNeightbours", //NOM TAULA
 			joinColumns = @JoinColumn(name="id_neightbour_1"), //NOM CLAU QUE PORTA EL PES
@@ -95,6 +95,11 @@ public class Makers {
 	
 	public void AddNeightbour(Makers m) {
 		this.neightbours.add(m);
+	}
+	
+	public void RemoveNeightbour(Makers m)
+	{
+		this.neightbours.remove(m);
 	}
 
 	public Set<Makers> getNeightbours() {

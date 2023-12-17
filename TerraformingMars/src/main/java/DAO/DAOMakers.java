@@ -48,9 +48,23 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 
 	/* Genera el tablero con 61 makers. Comprueba qué tipo de casilla es (esquina, borde o interior) y le asigna 
 	 * el valor de las casillas vecinas que tiene. Para ello, usa un constructor donde le pasas el maxneighbours */
-	public void generarTablero() 
+	public void regenerarTablero(boolean isFreshLoad) 
 	{
 		int makersTotales = 61;
+		
+		if(!isFreshLoad) 
+		{
+			List<Makers> makers = this.Llistar();
+			System.out.println("------------ Eliminando makers anteriores ---------------");
+			//Al tener un CascadeType.REMOVE en sus relaciones de vecinos, se borran todos.
+			this.DeleteEntity(makers.get(0));
+			//Si en su lugar tuviese un CascadeType.DETACH, podriamos utilizar un bucle para eliminarlos.
+			/*for (int i = makersTotales-1; i >= 0; i--) {
+				Makers maker = makers.get(i);
+				System.out.println("Intentando eliminar el maker con ID " + maker.getIdmakers());
+				this.DeleteEntity(maker);
+			}*/
+		}
 		System.out.println("Generando piezas del tablero...");
 		for(int i = 0; i < makersTotales; i++) {
 			if(i < 6)
@@ -86,6 +100,8 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		System.out.println("Makers conectados!");
 	}
 	
+	
+	
 	//Método que devuelve una lista con todos los makers de un tipo concreto.
 	public ArrayList<Makers> GetMakersByType(TypeMaker tm) 
 	{
@@ -110,8 +126,8 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 			if(GetAllMakerPossibleNeightbour().size() == 2)
 			{
 				System.out.println("Se ha dado el caso de que los dos últimos maker se intentaban asignar entre sí teniendo una relación. "
-						+ "Se vincula con una relación al azar y esos dos a esta.");
-				FixLastCoupleNeightboursWhenRelationExists(m1, m2);
+						+ "Como no he sabido resolver esto, regenero el tablero y a prendre pel cul.");
+				regenerarTablero(false);
 			}
 			return;
 		}
@@ -160,7 +176,7 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 	}
 	
 	/* Función para controlar el caso donde los dos últimos makers ya tienen una relación. Básicamente deja a uno huérfano. */
-	public void FixLastCoupleNeightboursWhenRelationExists(Makers maker1, Makers maker2)
+	/*public void FixLastCoupleNeightboursWhenRelationExists(Makers maker1, Makers maker2)
 	{
 		List<Makers> makers = this.Llistar();
 		//Tengo que hacer esta basura por que cuando cargas con Llistar() ya no son los mismos objetos según java.
@@ -186,7 +202,7 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 		maker3Alias.AddNeightbour(maker2Alias);
 		this.update(maker2Alias);
 		this.update(maker3Alias);
-	}
+	}*/
 	
 	/* El método devuelve un Maker aleatorio que todavía puede tener vecinos. Para hacerlo, utiliza una
 	 * lista que contiene todos los Makers que pueden tener casillas adjuntas, y 

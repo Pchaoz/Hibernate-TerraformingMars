@@ -34,7 +34,7 @@ public class MainJose {
 		int numPartida = 1;
 		isGameover = false;
 
-		daoMakers.generarTablero();
+		daoMakers.regenerarTablero(true);
 		daoGames.GenerateGames();
 		Games partida = daoGames.Search(numPartida);
 		daoCorporation.StartCorporations();

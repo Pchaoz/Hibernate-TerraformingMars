@@ -48,7 +48,6 @@ public class DAOGeneric<T, ID extends Serializable> implements IDAOGeneric<T, ID
 		T Entity = session.find(entityClass, id);
 		session.remove(Entity);
 		session.getTransaction().commit();
-		
 	}
 
 	@Override
@@ -56,8 +55,7 @@ public class DAOGeneric<T, ID extends Serializable> implements IDAOGeneric<T, ID
 		Session session = Utils.getSessionFactory().getCurrentSession();
 		session.getTransaction().begin();
 		session.remove(entity);
-		session.getTransaction().commit();
-		
+		session.getTransaction().commit();	
 	}
 
 	@Override
