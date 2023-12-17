@@ -1,5 +1,7 @@
 package DAO;
 
+import java.util.List;
+
 import Models.Corporations;
 
 public class DAOCorporation extends DAOGeneric<Corporations, Integer>{
@@ -21,6 +23,18 @@ public class DAOCorporation extends DAOGeneric<Corporations, Integer>{
 		GenerateCorp("Tharsis Republic","6");
 		GenerateCorp("U.N Mars Initiative","7");
 		GenerateCorp("Thorgate","8");	
+	}
+	
+	public void ResetCorporation()
+	{
+		List<Corporations> corporations = this.Llistar();
+		for (Corporations corporation : corporations) {
+			if(corporation.getPlayer() != null)
+			{
+				corporation.setPlayer(null);
+				this.update(corporation);
+			}
+		}
 	}
 	
 	public void increaseVictoryPoints(Corporations corporation, int victoryPoints)

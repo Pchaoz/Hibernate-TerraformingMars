@@ -42,4 +42,10 @@ public class DAOGames extends DAOGeneric<Games, Integer>{
 		this.update(game);
 	}
 	
+	public void SetWinner(Games game, Players player) 
+	{
+		game.setGuanyador(player);
+		this.update(game);
+	}
+	
 }

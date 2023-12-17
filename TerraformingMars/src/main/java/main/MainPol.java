@@ -74,11 +74,11 @@ public class MainPol {
 			for (int x = 0; x < coorMake.size(); x++) {
 				points++;
 				
-				if (coorMake.get(x).getTypeMaker() == TypeMaker.Bosc) {
+				if (coorMake.get(x).getTypeMaker() == TypeMaker.BOSC) {
 					jungle++;
-				}else if (coorMake.get(x).getTypeMaker() == TypeMaker.Ciutat) {
+				}else if (coorMake.get(x).getTypeMaker() == TypeMaker.CIUTAT) {
 					city++;
-				}else if  (coorMake.get(x).getTypeMaker() == TypeMaker.Oceà && sea < 3) {
+				}else if  (coorMake.get(x).getTypeMaker() == TypeMaker.OCEA && sea < 3) {
 					sea++;
 					if (sea == 3) {
 						points+= 3;

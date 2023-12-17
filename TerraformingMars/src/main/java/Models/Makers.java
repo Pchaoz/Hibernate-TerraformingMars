@@ -36,7 +36,7 @@ public class Makers {
 	@Column(name = "TypeMaker")
 	TypeMaker typeMaker;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinColumn(name="Corporation")
 	Corporations MakerOwner;
 

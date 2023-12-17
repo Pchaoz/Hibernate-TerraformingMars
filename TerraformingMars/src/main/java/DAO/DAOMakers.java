@@ -248,12 +248,11 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 	 * pasada, si son de ella las remueve de la lista. Despues envia la lista con solo casillas de esa misma corporacion
 	 */
 	public List<Makers> getMakersByCoorp(Corporations cor) {
-		List<Makers> mk = Llistar();
+		List<Makers> mk = this.Llistar();
 		List<Makers> mkCoorp = new ArrayList<Makers>();
-		System.out.println("aqu estoy GGET BY COORP");
 		for (Makers makers : mk) {
-			if (makers.getMakerOwner() != null) {
-				System.out.println("TENGO COORPORACION " + makers.getName());
+			if (makers.getMakerOwner() != null) 
+			{
 				if (makers.getMakerOwner().getName().equals(cor.getName()))
 					mkCoorp.add(makers);
 			}
@@ -265,7 +264,7 @@ public class DAOMakers extends DAOGeneric<Makers, Integer>{
 	 * con todas las casillas libres de corporaciones. Funciona igual que getMakersByCoorp()
 	 */
 	public List<Makers> getMarkersNoCoorp() {
-		List<Makers> mk = Llistar();
+		List<Makers> mk = this.Llistar();
 		List<Makers> mkNoCoorp = new ArrayList<Makers>();
 		for (Makers makers : mk) {
 			if (makers.getMakerOwner() == null) {

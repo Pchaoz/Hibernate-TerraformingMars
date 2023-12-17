@@ -25,7 +25,7 @@ public class Corporations {
 	private String Description;
 	@Column
 	private int Victorypoints = 0;
-	@OneToOne(mappedBy = "cor", cascade = CascadeType.PERSIST)
+	@OneToOne(mappedBy = "cor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	private Players player;
 	
 	@OneToMany(mappedBy = "MakerOwner", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})

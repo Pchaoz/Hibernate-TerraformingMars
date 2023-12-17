@@ -139,7 +139,7 @@ public class Games {
 	public Players getGuanyador() {
 		return Guanyador;
 	}
-
+	
 	public void setGuanyador(Players guanyador) {
 		Guanyador = guanyador;
 	}

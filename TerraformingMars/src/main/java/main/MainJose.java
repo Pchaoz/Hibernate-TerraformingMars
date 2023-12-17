@@ -1,11 +1,8 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import DAO.DAOCorporation;
 import DAO.DAOGames;
@@ -29,17 +26,21 @@ public class MainJose {
 	private static DAOGames daoGames = new DAOGames();
 	private static boolean isGameover = false;
 	private static boolean quitGame = false;
+	private static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 	
 		int numPartida = 1;
+		boolean isFreshGame = true;
 		daoCorporation.StartCorporations();
 		daoPlayers.GeneratePlayers();
 		
 		while(!quitGame) 
 		{
 			isGameover = false;
-			daoMakers.regenerarTablero(true);
+
+			daoCorporation.ResetCorporation();
+			daoMakers.regenerarTablero(isFreshGame);
 			daoGames.GenerateGames();
 			Games partida = daoGames.Search(numPartida);
 			List<Corporations> corporations = daoCorporation.Llistar();
@@ -55,16 +56,41 @@ public class MainJose {
 				}
 			}
 			System.out.println("La partida ha terminado!");
+			SetVictoryPoints();
+			SetWinner(partida);
+			quitGame = Menu();
+			numPartida++;
+			isFreshGame = false;
 		}
-		
-
-		
-		
-		
+		System.out.println("Saliendo del juego. Hasta pronto!");
 		Utils.close();
 
 	}
 	
+	public static boolean Menu() {	
+		boolean exitConsola = false;
+		boolean terminar = false;
+		while(!exitConsola)
+		{
+			System.out.println("La partida ha terminado. Quieres empezar otra partida? 1- Sí | 2- No \n");
+			String entrada = scan.nextLine();
+			switch(entrada)
+			{
+				case "1":
+					terminar = false;
+					exitConsola = true;
+					break;
+				case "2":
+					terminar = true;
+					exitConsola = true;
+					break;
+				default:
+					System.out.println("Opción incorrecta. Selecciona entre las opciones 1 y 2.");
+					break;
+			}
+		}
+		return terminar;
+	}
 	
 	/*Función que se encarga de resolver el turno del jugador. Lanza los dados y resuelve la tirada*/
 	public static void RollDices(Players player, Games partida) 
@@ -281,4 +307,94 @@ public class MainJose {
 		System.out.println("Todas las casillas de oceano pertenecen a un jugador. Se cumple una condicion de partida terminada.");
 		return true;
 	}
+	
+	//Método que setea los victory points a las corporaciones
+	private static void SetVictoryPoints() 
+	{
+		
+		System.out.println("Haciendo recuento de puntos de victoria...");
+		List<Corporations> lc = daoCorporation.Llistar();		
+		
+		int maxCitites = 0;
+		int maxJungle = 0;
+		int coorC = 0;
+		int coorJ = 0;
+		
+		for (int i = 0; i < lc.size(); i++) 
+		{
+						
+			Corporations coor =  lc.get(i);
+			List<Makers> coorMake = daoMakers.getMakersByCoorp(coor);
+			
+			int jungle = 0;
+			int city = 0;
+			int sea = 0;
+			
+			int points = 0;
+			
+			for (int x = 0; x < coorMake.size(); x++) 
+			{
+				points++;
+				System.out.println("Añadiendo un punto de victoria a la corporacion " + coor.getName() + " por casilla en posesión.");
+				if (coorMake.get(x).getTypeMaker() == TypeMaker.BOSC) 
+				{
+					jungle++;
+				}else if (coorMake.get(x).getTypeMaker() == TypeMaker.CIUTAT) 
+				{
+					city++;
+				}else if  (coorMake.get(x).getTypeMaker() == TypeMaker.OCEA && sea < 3) 
+				{
+					sea++;
+					if (sea == 3) {
+						System.out.println("Añadiendo tres puntos de victoria a la corporación " + coor.getName() + " por tener tres casillas de oceano en posesión.");
+						points+= 3;
+					}
+				}
+			}
+			if (jungle > maxJungle) {
+				maxJungle = jungle;
+				coorJ = i;
+			}
+			if (city > maxCitites) {
+				maxCitites = city;
+				coorC = i;
+			}
+			
+			coor.setVictorypoints(points);
+			daoCorporation.update(coor);
+		}
+		
+		Corporations corporationMaxJungles = lc.get(coorJ);
+		corporationMaxJungles.setVictorypoints(lc.get(coorJ).getVictorypoints() + 3);
+		System.out.println("Añadiendo tres puntos de victoria a la corporación " + corporationMaxJungles.getName() + " por tener el mayor de casillas de jungla en posesión.");
+		daoCorporation.update(corporationMaxJungles);
+		
+		Corporations corporationMaxCities = lc.get(coorC);
+		corporationMaxCities.setVictorypoints(lc.get(coorC).getVictorypoints() + 3);
+		System.out.println("Añadiendo tres puntos de victoria a la corporación " + corporationMaxCities.getName() + " por tener el mayor de casillas de ciudad en posesión.");
+		daoCorporation.update(corporationMaxCities);
+		
+		for (Corporations corporation : lc) {
+			if(corporation.getPlayer() != null)
+				System.out.println("La corporación " + corporation.getName() + " suma un total de " + corporation.getVictorypoints() + " puntos de victoria.");
+		}
+	}
+	
+	//Función para determinar el ganador
+	private static void SetWinner(Games partida)
+	{
+		List<Corporations> corporations = daoCorporation.Llistar();
+		Corporations winner = null;
+		for (Corporations corporation: corporations) 
+		{
+			if(winner == null || winner.getVictorypoints() < corporation.getVictorypoints())
+				winner = corporation;
+		}
+		Players player = winner.getPlayer();
+		System.out.println("El ganador de la partida es " + player.getName() + " con la corporación " + winner.getName() + " sumando un total de " + winner.getVictorypoints() + " puntos de victoria!!!");
+		
+		Games partidaActual = daoGames.Search(partida.getIdGame());
+		daoGames.SetWinner(partidaActual, player);
+	}
+	
 }
