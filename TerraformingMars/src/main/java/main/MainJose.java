@@ -28,27 +28,38 @@ public class MainJose {
 	private static DAOCorporation daoCorporation = new DAOCorporation();
 	private static DAOGames daoGames = new DAOGames();
 	private static boolean isGameover = false;
+	private static boolean quitGame = false;
 	
 	public static void main(String[] args) {
 	
 		int numPartida = 1;
-		isGameover = false;
-
-		daoMakers.regenerarTablero(true);
-		daoGames.GenerateGames();
-		Games partida = daoGames.Search(numPartida);
 		daoCorporation.StartCorporations();
-		List<Corporations> corporations = daoCorporation.Llistar();
 		daoPlayers.GeneratePlayers();
-		daoPlayers.AssignCorporationToPlayers(corporations);
-		List<Players> players = daoPlayers.Llistar();
-		daoGames.AssignPlayersToCurrentGame(players, partida);
 		
-		Players playerActual = players.get(0);
+		while(!quitGame) 
+		{
+			isGameover = false;
+			daoMakers.regenerarTablero(true);
+			daoGames.GenerateGames();
+			Games partida = daoGames.Search(numPartida);
+			List<Corporations> corporations = daoCorporation.Llistar();
+			daoPlayers.AssignCorporationToPlayers(corporations);
+			List<Players> players = daoPlayers.Llistar();
+			daoGames.AssignPlayersToCurrentGame(players, partida);
+			System.out.println("Comienza la partida!");
+			while(!isGameover)
+			{
+				for (Players player : players) {
+					System.out.println("Turno del jugador: " + player.getName());
+					RollDices(player, partida);
+				}
+			}
+			System.out.println("La partida ha terminado!");
+		}
 		
-		RollDices(playerActual, partida);
-		RollDices(playerActual, partida);
-		RollDices(playerActual, partida);
+
+		
+		
 		
 		Utils.close();
 
@@ -66,8 +77,7 @@ public class MainJose {
 		System.out.print("El jugador " + player.getName() + " ha sacado los resultados: ");
 		PrintDices(dados);
 		ResolveDices(player.getCor(), dados, partida);
-		Corporations playerCorporation = player.getCor();
-		//CheckWinConditions(partida.getIdGame(), playerCorporation);
+		CheckWinConditions(partida.getIdGame(), player.getCor());
 	}
 	
 	/* Resolución de dados:
@@ -84,46 +94,89 @@ public class MainJose {
 		int [] resultados = RecountDices(dices);
 		if(resultados[0] >= 3) {
 			//Incrementar Temperatura
-			daoGames.AddTemperature(partida);
+			Games partidaActual = daoGames.Search(partida.getIdGame());
+			daoGames.AddTemperature(partidaActual);
 			System.out.println("Se incrementa la temperatura en 2.");
 			if(resultados[0] == 6) {
 				//Incrementar Temperatura
-				daoGames.AddTemperature(partida);
+				daoGames.AddTemperature(partidaActual);
 				System.out.println("Se incrementa la temperatura en 2 nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}
 		if(resultados[1] >= 3) {
 			//Incrementar oxigeno
-			daoGames.AddOxygen(partida);
+			Games partidaActual = daoGames.Search(partida.getIdGame());
+			daoGames.AddOxygen(partidaActual);
 			System.out.println("Se incrementa el oxigeno en 1.");
 			if(resultados[1] == 6) {
 				//Incrementar oxigeno
-				daoGames.AddOxygen(partida);
+				daoGames.AddOxygen(partidaActual);
 				System.out.println("Se incrementa el oxigeno en 1 nuevamente por obtener seis dados iguales!");
 				return;
 			}
 		}
 		if(resultados[2] >= 3) {
 			//Asociar casilla oceano
-			System.out.println("Se asocia una casilla oceano.");
-			if(resultados[2] == 6) {
-				//Asociar casilla oceano
-				System.out.println("Se asocia otra casilla oceano nuevamente por obtener seis dados iguales!");
+			List<Makers> oceans = daoMakers.GetMakersByType(TypeMaker.OCEA);
+			Makers maker = AssignMakerToCorporation(oceans, playerCorporation);
+			if(maker != null)
+			{
+				System.out.println("Se asocia una casilla oceano a la casilla " + maker.getIdmakers() + " a la corporación "+ playerCorporation.getName() +".");
+				daoMakers.setMakerToCorporation(maker, playerCorporation);
+			} else 
+			{
+				System.out.println("No quedan casillas de oceano disponibles.");
+			}
+					
+			if(resultados[2] == 6) 
+			{
+				//Asociar casilla oceano			
+				Makers maker2 = AssignMakerToCorporation(oceans, playerCorporation);
+				if(maker != null)
+				{
+					System.out.println("Se asocia otra casilla oceano a la casilla " + maker.getIdmakers() + " a la corporación "+ playerCorporation.getName() 
+					+ " nuevamente por obtener seis dados iguales!");
+					daoMakers.setMakerToCorporation(maker2, playerCorporation);		
+				} 		
 				return;
 			}
 		}
 		if(resultados[3] >= 4) {
 			//Asociar casilla Jungla
-			System.out.println("Se asocia una casilla bosque.");
+			List<Makers> junglas = daoMakers.GetMakersByType(TypeMaker.BOSC);
+			Makers maker = AssignMakerToCorporation(junglas, playerCorporation);
+			if(maker != null)
+			{
+				System.out.println("Se asocia una casilla bosque a la casilla " + maker.getIdmakers() + " a la corporación "+ playerCorporation.getName() +".");
+				daoMakers.setMakerToCorporation(maker, playerCorporation);
+			} else 
+			{
+				System.out.println("No quedan casillas de bosque disponibles.");
+			}		
 			return;
 		}
 		if(resultados[4] >= 3) {
 			//Asociar ciudad
-			System.out.println("Se asocia una casilla ciudad.");
+			List<Makers> ciutats = daoMakers.GetMakersByType(TypeMaker.CIUTAT);
+			Makers maker = AssignMakerToCorporation(ciutats, playerCorporation);
+			if(maker != null)
+			{
+				System.out.println("Se asocia una casilla ciudad a la casilla " + maker.getIdmakers() + " a la corporación "+ playerCorporation.getName() +".");
+				daoMakers.setMakerToCorporation(maker, playerCorporation);
+			} else 
+			{
+				System.out.println("No quedan casillas de ciudad disponibles.");
+			}		
 			if(resultados[4] == 6) {
 				//Asociar ciudad
-				System.out.println("Se asocia otra casilla ciudad nuevamente por obtener seis dados iguales!");
+				Makers maker2 = AssignMakerToCorporation(ciutats, playerCorporation);
+				if(maker != null)
+				{
+					System.out.println("Se asocia otra casilla ciudad a la casilla " + maker.getIdmakers() + " a la corporación "+ playerCorporation.getName() 
+					+ " nuevamente por obtener seis dados iguales!");
+					daoMakers.setMakerToCorporation(maker2, playerCorporation);		
+				} 		
 				return;
 			}
 		}
@@ -138,6 +191,17 @@ public class MainJose {
 		} else {
 			System.out.println("No te ha tocado nada en los dados pringao.");
 		}
+	}
+	
+	public static Makers AssignMakerToCorporation(List<Makers> makers, Corporations playerCorporation)
+	{
+		Makers maker = null;
+		for (Makers tipo : makers) 
+		{
+			if(tipo.getMakerOwner() == null)
+				maker = tipo;
+		}
+		return maker;
 	}
 	
 	public static int[] RecountDices(int [] dices) {
@@ -202,15 +266,19 @@ public class MainJose {
 	
 	public static boolean CheckAllOceanMakers(List<Makers> oceanMakers, Corporations playerCorporation)
 	{
-		boolean winCondition = true;
 		for (Makers maker : oceanMakers) {
-			if(!maker.getMakerOwner().equals(playerCorporation) || maker.getMakerOwner() == null)
+			if(maker.getMakerOwner() == null)
 			{
-				winCondition = false;
-				return winCondition;
-			}		
+				return false;
+			} else
+			{
+				if(!maker.getMakerOwner().equals(playerCorporation))
+				{
+					return false;
+				}
+			}
 		}
 		System.out.println("Todas las casillas de oceano pertenecen a un jugador. Se cumple una condicion de partida terminada.");
-		return winCondition;
+		return true;
 	}
 }

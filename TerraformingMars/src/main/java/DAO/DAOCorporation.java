@@ -22,5 +22,11 @@ public class DAOCorporation extends DAOGeneric<Corporations, Integer>{
 		GenerateCorp("U.N Mars Initiative","7");
 		GenerateCorp("Thorgate","8");	
 	}
+	
+	public void increaseVictoryPoints(Corporations corporation, int victoryPoints)
+	{
+		corporation.addVictorypoints(victoryPoints);
+		this.update(corporation);
+	}
 
 }
