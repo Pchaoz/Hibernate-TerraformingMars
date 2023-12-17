@@ -46,19 +46,58 @@ public class MainPol {
 		System.out.println("CASILLAS CON COORPORACION 1: ");
 		System.out.println(withC1.toString());
 		
-		SetVictoryPoints(p1, p2, p3, p4);		
+		SetVictoryPoints();		
 		
 	}
 	
-	private static void SetVictoryPoints(Players p1, Players p2, Players p3, Players p4) {
+	private static void SetVictoryPoints() {
+		DAOCorporation coorDAO = new DAOCorporation();
+		DAOMakers makersDAO = new DAOMakers();
+		List<Corporations> lc = coorDAO.Llistar();
 		
-		CheckPointsCoorp(p1.getCor());
-	}
-
-	private static void CheckPointsCoorp(Corporations c) {
-		DAOMakers dmakers = new DAOMakers();
+		int maxCitites = -1;
+		int maxJungle = -1;
+		int coorC = -1;
+		int coorJ = -1;
 		
-		List<Makers> cmk = dmakers.getMakersByCoorp(c);
+		for (int i = 0; i > lc.size(); i++) {
+						
+			Corporations coor =  lc.get(i);
+			List<Makers> coorMake = makersDAO.getMakersByCoorp(coor);
+			
+			int jungle = 0;
+			int city = 0;
+			int sea = 0;
+			
+			int points = 0;
+			
+			for (int x = 0; x < coorMake.size(); x++) {
+				points++;
+				
+				if (coorMake.get(x).getTypeMaker() == TypeMaker.Bosc) {
+					jungle++;
+				}else if (coorMake.get(x).getTypeMaker() == TypeMaker.Ciutat) {
+					city++;
+				}else if  (coorMake.get(x).getTypeMaker() == TypeMaker.Oceà && sea < 3) {
+					sea++;
+					if (sea == 3) {
+						points+= 3;
+					}
+				}
+			}
+			if (jungle > maxJungle) {
+				maxJungle = jungle;
+				coorJ = i;
+			}
+			if (city > maxCitites) {
+				maxCitites = city;
+				coorC = i;
+			}
+			
+			coor.setVictorypoints(points);
+		}
 		
+		lc.get(coorJ).setVictorypoints(lc.get(coorJ).getVictorypoints() + 3);
+		lc.get(coorC).setVictorypoints(lc.get(coorC).getVictorypoints() + 3);
 	}
 }
