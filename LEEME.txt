@@ -4,4 +4,8 @@ Cosas a comentar:
 Eso provocaba que se quedara en bucle intentando conectarlos, pero al ser un Set, no termina de conectarlos.
 Lo que he hecho es que si se da este caso, regenere el tablero de nuevo, por lo que si el tablero se intenta construir varias veces es por este caso.
 
+- Si necesitas ver las consultas y queries que se hacen, puedes modificar la linea en el fichero hibernate.cfg
+		<property name="show_sql">false</property>
+Esto hace que no se vea la ristra de consultas SQL que hibernate hace por debajo. Poniendola a true se vuelven a ver.
+
 Jose, Pol, Alex.
