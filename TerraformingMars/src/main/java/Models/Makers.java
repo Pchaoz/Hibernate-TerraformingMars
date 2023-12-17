@@ -35,19 +35,18 @@ public class Makers {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "TypeMaker")
 	TypeMaker typeMaker;
-
-	@ManyToOne(cascade = CascadeType.PERSIST)
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="Corporation")
 	Corporations MakerOwner;
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
 	@JoinTable(
-			name="MakersNeightbours", //NOM COLUMNA
-			joinColumns = @JoinColumn(name="id_maker"), //NOM CLAU QUE PORTA EL PES
-			inverseJoinColumns = @JoinColumn(name="id_neightbour") //NOM DE LA CLAU QUE NO PORTA EL PES
+			name="MakersNeightbours", //NOM TAULA
+			joinColumns = @JoinColumn(name="id_neightbour_1"), //NOM CLAU QUE PORTA EL PES
+			inverseJoinColumns = @JoinColumn(name="id_neightbour_2") //NOM DE LA CLAU QUE NO PORTA EL PES
 	)
 	private Set<Makers> neightbours = new HashSet<Makers>();
-
-
 
 	public int getIdmakers() {
 		return idmakers;
@@ -92,6 +91,31 @@ public class Makers {
 	public void setTypeMaker(TypeMaker typeMaker) {
 		this.typeMaker = typeMaker;
 	}
+	
+	public Corporations getMakerOwner() {
+		return MakerOwner;
+	}
+
+	public void setMakerOwner(Corporations makerOwner) {
+		MakerOwner = makerOwner;
+	}
+	
+	public void AddNeightbour(Makers m) {
+		this.neightbours.add(m);
+	}
+	
+	public void RemoveNeightbour(Makers m)
+	{
+		this.neightbours.remove(m);
+	}
+
+	public Set<Makers> getNeightbours() {
+		return neightbours;
+	}
+
+	public void setNeightbours(Set<Makers> neightbours) {
+		this.neightbours = neightbours;
+	}
 
 	public Makers(String name, int maxneightbours, TypeMaker typeMaker) {
 		super();
@@ -108,26 +132,6 @@ public class Makers {
 
 	public Makers() {
 		super();
-	}
-	public void AddNeightbour(Makers m) {
-		if(this == m) {
-			return;
-		}
-		if(this.neightbours.contains(m)) {
-			return;
-		}
-		if(this.neightbours.size()== this.getMaxneightbours()) {
-			return;
-		}
-		this.neightbours.add(m);
-	}
-
-	public Set<Makers> getNeightbours() {
-		return neightbours;
-	}
-
-	public void setNeightbours(Set<Makers> neightbours) {
-		this.neightbours = neightbours;
 	}
 
 	@Override
